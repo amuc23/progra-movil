@@ -1,27 +1,44 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content {
+  --background: url('/assets/img/fondo4k.png'); /* Asegúrate de que la ruta sea correcta */
+  --background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda el área del ion-content */
+  --background-position: center center; /* Centra la imagen en el contenedor tanto vertical como horizontalmente */
+  --background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100%; /* Asegúrate de que el ion-content ocupe toda la altura del contenedor */
+}
+.container {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos en una columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  height: 100%; /* Ocupa toda la altura disponible del ion-content */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Estilo para el contenedor de imágenes box1 */
+.box1 {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente dentro del contenedor */
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+/* Estilo para el contenedor de imágenes box2 */
+.box2 {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra las imágenes horizontalmente dentro del contenedor */
 }
 
-#container a {
-  text-decoration: none;
+/* Estilo para la imagen imagen2 */
+.imagen2 {
+  width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 200px auto 0; /* Margen superior de 20px para desplazar la imagen hacia abajo, centrado horizontalmente */
+  padding-top: 20px; /* Añade un relleno superior para separar de la imagen anterior */
+}
+
+/* Estilo para la imagen imagen3 */
+.imagen3 {
+  width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  padding-top: 20px; /* Añade un relleno superior para separar de la imagen anterior */
 }
