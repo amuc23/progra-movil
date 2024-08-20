@@ -10,12 +10,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="container">
-    <div class="box1">
-      <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisaradiolos40/XVRM4ZSAIRIFVOQ5U5EFOYJ6ZQ.jpg" alt="" class="imagen2">
-    </div>
-    <div class="box2">
-      <img src="https://bonusstagemagazine.wordpress.com/wp-content/uploads/2020/11/curiosidades-street-fighter-ii-tatuaje-zangief.png" alt="" class="imagen3">
+  <div class="home-container">
+    <img src="assets/img/MegaGames.jpeg" alt="Game Controller" class="home-image" />
+    <div class="button-grid">
+      <ion-button expand="block" class="grid-button">
+        <ion-icon name="game-controller-outline" slot="start"></ion-icon>
+        Juegos
+      </ion-button>
+      <ion-button expand="block" class="grid-button">
+        <ion-icon name="desktop-outline" slot="start"></ion-icon>
+        Consolas
+      </ion-button>
+      <ion-button expand="block" class="grid-button">
+        <ion-icon name="cube-outline" slot="start"></ion-icon>
+        Juguetes
+      </ion-button>
+      <ion-button expand="block" class="grid-button">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        Salir
+      </ion-button>
     </div>
   </div>
 </ion-content>
