@@ -22,7 +22,23 @@ const routes: Routes = [
   {
     path: 'juegos',
     loadChildren: () => import('./pages/juegos/juegos.module').then( m => m.JuegosPageModule)
+  },  {
+    path: 'carrito',
+    loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
+  {
+    path: 'perfil',
+    loadChildren: () => import('./pages/perfil/perfil.module').then( m => m.PerfilPageModule)
+  },
+  {
+    path: 'consolas',
+    loadChildren: () => import('./pages/consolas/consolas.module').then( m => m.ConsolasPageModule)
+  },
+  {
+    path: 'juguetes',
+    loadChildren: () => import('./pages/juguetes/juguetes.module').then( m => m.JuguetesPageModule)
+  },
+
 ];
 
 @NgModule({

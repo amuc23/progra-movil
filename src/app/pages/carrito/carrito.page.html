@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink] = "['/home']"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Carro de Compras</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista De Productos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/caratula-hollow.jpeg" />
+          </ion-thumbnail>
+          <ion-label>
+            Item1
+          </ion-label>
+          <ion-label slot="end">
+            $15.000
+          </ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/consolas/2dsXL-consola.jpg" />
+          </ion-thumbnail>
+          <ion-label>
+            Item2
+          </ion-label>
+          <ion-label slot="end">
+            $159.000
+          </ion-label>
+        </ion-item>
+  
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img alt="Silhouette of mountains" src="assets/img/jugetes/Zelda-juguete.png" />
+          </ion-thumbnail>
+          <ion-label>
+            Item3
+          </ion-label>
+          <ion-label slot="end">
+            $67.090
+          </ion-label>
+        </ion-item>
+  
+      </ion-list>
+      <ion-button expand="full" color="primary" style="margin-top: 20px;">
+        Comprar
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>

@@ -1,13 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Volver" icon="arrow-back-outline"></ion-back-button>
     </ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+
+
+<ion-content [fullscreen]="true" >
+  <!--espacio-->
+  <div class="spacer"></div>
+  <!--espacio-->
+  <div class="spacer"></div>
+  
+  <!--contenido-->
   <div class="login-container">
     <h2>Login</h2>
     <ion-list>
@@ -19,7 +26,7 @@
         <ion-label>Contraseña</ion-label>
         <ion-input type="password" id="password" name="password" required></ion-input>
       </ion-item>
-      <ion-button expand="block">Ingresar</ion-button>
+      <ion-button expand="block"[routerLink] = "['/home']">Ingresar</ion-button>
     </ion-list>
     <p>No tienes cuenta? <a routerLink="/registro">Regístrate aquí!</a></p>
   </div>

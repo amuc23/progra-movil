@@ -1,28 +1,25 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Atras" icon="arrow-back-outline"[routerLink] = "['/home']"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline"[routerLink] = "['/home']"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink] = "['/carrito']"></ion-back-button>
     </ion-buttons>
-    <ion-title>Catalogo de Videojuegos</ion-title>
+    <ion-title>Catalogo de Juguetes</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<!--------------------------------------------------->
-
 <ion-content [fullscreen]="true">
   <ion-searchbar></ion-searchbar>
-  <ion-card class="videojuego-card">
-    <ion-item lines="none" class="videojuego-item">
+  <ion-card class="juguete-card">
+    <ion-item lines="none" class="juguete-item">
       <ion-thumbnail slot="start" class="thumbnail-grande">
-        <img src="assets/img/kurukuru.gif" alt="GIF">
+        <img src="assets/img/jugetes/spiderman-juguete.jpg" alt="img test">
       </ion-thumbnail>
       <ion-label>
-        <h2>KuruKuru</h2>
-        <p>$:99.500</p>
-        <p>Consola disponible: PlayStation</p>
+        <h2>Funko Pop Spiderman</h2>
+        <p>$:50.300</p>
       </ion-label>
     </ion-item>
     <ion-item lines="none" class="add-cart-item">
@@ -33,15 +30,14 @@
     </ion-item>
   </ion-card>
 
-  <ion-card class="videojuego-card">
-    <ion-item lines="none" class="videojuego-item">
+  <ion-card class="juguete-card">
+    <ion-item lines="none" class="juguete-item">
       <ion-thumbnail slot="start" class="thumbnail-grande">
-        <img src="\assets\img\gears of wars.jpg" />
+        <img src="assets/img/jugetes/samus1.jpg" alt="img test">
       </ion-thumbnail>
       <ion-label>
-        <h2>Gears Of Wars</h2>
-        <p>$:17.500</p>
-        <p>Consola disponible: Xbox, PlayStation</p>
+        <h2>Samus</h2>
+        <p>$:32.000</p>
       </ion-label>
     </ion-item>
     <ion-item lines="none" class="add-cart-item">
@@ -52,16 +48,14 @@
     </ion-item>
   </ion-card>
 
-  <ion-card class="videojuego-card">
-    <ion-item lines="none" class="videojuego-item">
+  <ion-card class="juguete-card">
+    <ion-item lines="none" class="juguete-item">
       <ion-thumbnail slot="start" class="thumbnail-grande">
-        <img src="assets/img/caratula-hollow.jpeg" />
+        <img src="assets/img/jugetes/coronel-juguete.jpg" alt="img test">
       </ion-thumbnail>
       <ion-label>
-        <h2>Hollow Knight</h2>
-        <p>$:15.000</p>
-        <p>Consola disponible: Xbox, PlayStation, 
-          Nintendo Switch</p>
+        <h2>Funko Coronel Sanders</h2>
+        <p>$:56.000</p>
       </ion-label>
     </ion-item>
     <ion-item lines="none" class="add-cart-item">
@@ -72,16 +66,14 @@
     </ion-item>
   </ion-card>
 
-  <ion-card class="videojuego-card">
-    <ion-item lines="none" class="videojuego-item">
+  <ion-card class="juguete-card">
+    <ion-item lines="none" class="juguete-item">
       <ion-thumbnail slot="start" class="thumbnail-grande">
-        <img src="assets/img/caratula-megaman11.jpeg" />
+        <img src="assets/img/jugetes/Zelda-juguete.png" alt="img test">
       </ion-thumbnail>
       <ion-label>
-        <h2>MegaMan 11</h2>
-        <p>$:23.700</p>
-        <p>Consola disponible: Xbox, PlayStation, 
-          Nintendo Switch</p>
+        <h2>Link Amibbo</h2>
+        <p>$:80.000</p>
       </ion-label>
     </ion-item>
     <ion-item lines="none" class="add-cart-item">
@@ -92,4 +84,3 @@
     </ion-item>
   </ion-card>
 </ion-content>
-

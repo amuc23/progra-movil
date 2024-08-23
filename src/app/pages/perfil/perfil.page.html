@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/" text="Salir" icon="arrow-back-outline" [routerLink] = "['/home']"></ion-back-button>
+  </ion-buttons>
+  <ion-toolbar>
+    <ion-title>Perfil del Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img src="assets/img/Zero.png" alt="Imagen de perfil" class="profile-image"></ion-img>
+    </ion-card-header>
+    <ion-card-content>
+      <p class="username">Nombre de Usuario: Juanito</p>
+      <ion-button expand="block" color="danger" [routerLink] = "['/login']">
+        Cerrar Sesión
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

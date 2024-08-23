@@ -1,10 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Salir" icon="arrow-back-outline"></ion-back-button>
-    </ion-buttons>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink] = "['/carrito']"></ion-back-button>
     </ion-buttons>
     <ion-title>
       Inicio
@@ -17,19 +14,19 @@
   <div class="home-container">
     <img src="assets/img/MegaGames.jpeg" alt="Game Controller" class="home-image" />
     <div class="button-grid">
-      <ion-button expand="block" class="grid-button"[routerLink] = "['/juegos']">
+      <ion-button expand="block" class="grid-button" [routerLink] = "['/juegos']">
         <ion-icon name="game-controller-outline" slot="start"></ion-icon>
         Juegos
       </ion-button>
-      <ion-button expand="block" class="grid-button">
+      <ion-button expand="block" class="grid-button" [routerLink] = "['/consolas']">
         <ion-icon name="desktop-outline" slot="start"></ion-icon>
         Consolas
       </ion-button>
-      <ion-button expand="block" class="grid-button">
+      <ion-button expand="block" class="grid-button" [routerLink] = "['/juguetes']">
         <ion-icon name="cube-outline" slot="start"></ion-icon>
         Juguetes
       </ion-button>
-      <ion-button expand="block" class="grid-button">
+      <ion-button expand="block" class="grid-button" [routerLink] = "['/perfil']">
         <ion-icon name="person-outline" slot="start"></ion-icon>
         Perfil
       </ion-button>
