@@ -6,9 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-
-
-<ion-content [fullscreen]="true" >
+<ion-content [fullscreen]="true">
   <!--espacio-->
   <div class="spacer"></div>
   <!--espacio-->
@@ -19,14 +17,16 @@
     <h2>Login</h2>
     <ion-list>
       <ion-item>
-        <ion-label>Email</ion-label>
+        <ion-label>Usuario</ion-label>
         <ion-input type="email" id="email" name="email" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Contraseña</ion-label>
-        <ion-input type="password" id="password" name="password" required></ion-input>
+        <ion-input type="password" label="" value="">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
       </ion-item>
-      <ion-button expand="block"[routerLink] = "['/home']">Ingresar</ion-button>
+      <ion-button expand="block" [routerLink]="['/home']">Ingresar</ion-button>
     </ion-list>
     <p>No tienes cuenta? <a routerLink="/registro">Regístrate aquí!</a></p>
   </div>

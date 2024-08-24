@@ -48,3 +48,23 @@ ion-content {
   --background: none; /* Asegúrate de que no haya un fondo predeterminado */
   background: linear-gradient(to bottom right, #3498db, #2ecc71);
 }
+
+
+.custom-searchbar {  /* Diseño de la barra colores mas que nada  */
+  --background: #3498db; /* Color de fondo de la barra de búsqueda */
+  --color: #ffffff; /* Color del texto en la barra de búsqueda */
+  --placeholder-color: #ffffff; /* Color del texto placeholder */
+  --icon-color: #ffffff; /* Color del ícono de búsqueda */
+  --cancel-button-color: #ffffff; /* Color del botón de cancelar */
+  --show-clear-button: always; /* Mostrar siempre el botón de limpiar */
+  --clear-button-color: #ffffff; /* Color del botón de limpiar */
+  --box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15); /* Sombra alrededor de la barra de búsqueda */
+  --border-radius: 10px; /* Borde redondeado para la barra de búsqueda */
+  --height: 45px; /* Altura de la barra de búsqueda */
+}
+
+.custom-searchbar input {
+  --padding-start: 10px; /* Espaciado al inicio del input */
+  --padding-end: 10px; /* Espaciado al final del input */
+  --margin: 0px; /* Margen del input */
+}
