@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="recuperar-container">
+    <h2>Recuperar Contraseña</h2>
+    <ion-list>
+      <ion-item>
+        <ion-label>Correo Electronico</ion-label>
+        <ion-input type="email" id="email" name="email" required></ion-input>
+      </ion-item>
+      <ion-button expand="block" [routerLink]="['/login']">Ingresar</ion-button>
+    </ion-list>
+  </div>
+</ion-content>
+

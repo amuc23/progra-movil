@@ -38,6 +38,10 @@ const routes: Routes = [
     path: 'juguetes',
     loadChildren: () => import('./pages/juguetes/juguetes.module').then( m => m.JuguetesPageModule)
   },
+  {
+    path: 'recuperar',
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+  },
 
 ];
 
