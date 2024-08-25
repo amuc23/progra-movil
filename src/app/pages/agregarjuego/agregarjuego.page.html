@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/']">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+        Volver
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Agregar Juego</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="agregarjuego-container">
+    <form>
+      <ion-list>
+        <ion-item>
+          <ion-label>Nombre del Videojuego</ion-label>
+          <ion-input class="custom-input" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Descripción</ion-label>
+          <ion-textarea></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Precio</ion-label>
+          <ion-input class="custom-input" type="number"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Consolas Compatibles</ion-label>
+          <ion-input class="custom-input" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>URL de la Imagen</ion-label>
+          <ion-input class="custom-input"type="url"></ion-input>
+        </ion-item>
+      </ion-list>
+
+      <ion-button expand="full">Agregar Videojuego</ion-button>
+    </form>
+  </div>
+</ion-content>
