@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>cambioclave</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--espacio-->
+  <div class="spacer"></div>
+
+  <!--contenido-->
+  <div class="cambio-container">
+    <h2>Cambio De Contraseña</h2>
+    <ion-list> 
+
+      <ion-item>
+        <ion-label >Contraseña</ion-label>
+        <ion-input type="password" label="" value="">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label >Confirmar Contraseña</ion-label>
+        <ion-input type="password" label="" value="">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+
+      <ion-button expand="block" [routerLink]="['/login']">Realizar Cambio De Clave</ion-button>
+    </ion-list>
+  </div>
+</ion-content>
