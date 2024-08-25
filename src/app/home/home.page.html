@@ -29,23 +29,27 @@
         <ion-icon name="person-outline" slot="start"></ion-icon>
         Perfil
       </ion-button>
+      <ion-button expand="block" class="grid-button" [routerLink]="['/crudjuegos']">
+        <ion-icon name="key-outline" slot="start"></ion-icon>
+        Edicion
+      </ion-button>
     </div>
-  </div>
 
-  <!-- Swiper Slider -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" *ngFor="let product of products">
-        <ion-card>
-          <img [src]="product.image" alt="{{ product.name }}" />
-          <ion-card-header>
-            <ion-card-title>{{ product.name }}</ion-card-title>
-            <ion-card-subtitle>{{ product.price }}</ion-card-subtitle>
-          </ion-card-header>
-          <ion-card-content>
-            {{ product.description }}
-          </ion-card-content>
-        </ion-card>
+    <!-- Swiper Slider -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let product of products">
+          <ion-card>
+            <img [src]="product.image" alt="{{ product.name }}" />
+            <ion-card-header>
+              <ion-card-title>{{ product.name }}</ion-card-title>
+              <ion-card-subtitle>{{ product.price }}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              {{ product.description }}
+            </ion-card-content>
+          </ion-card>
+        </div>
       </div>
     </div>
   </div>

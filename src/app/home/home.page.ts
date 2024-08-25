@@ -9,9 +9,9 @@ import Swiper from 'swiper'; // Muestra más de una tarjeta parcialmente visible
 export class HomePage implements AfterViewInit {
   slideOpts = {
     slidesPerView: 1.2, // Muestra más de una tarjeta parcialmente visible
-    spaceBetween: 10,   // Espacio entre las tarjetas
+    spaceBetween: 2,   // Espacio entre las tarjetas
     centeredSlides: true,
-    loop: false,         // Hace que las tarjetas se repitan en un bucle
+    loop: true,         // Hace que las tarjetas no se repitan en un bucle
   };
 
   products = [
@@ -42,6 +42,12 @@ export class HomePage implements AfterViewInit {
     },
     {
       name: 'Producto 5',
+      price: '$50.99',
+      description: 'Descripción del producto 5',
+      image: 'assets/img/caratula-hollow.jpeg'
+    },
+    {
+      name: 'Producto 6',
       price: '$50.99',
       description: 'Descripción del producto 5',
       image: 'assets/img/caratula-hollow.jpeg'

@@ -46,6 +46,10 @@ const routes: Routes = [
     path: 'cambioclave',
     loadChildren: () => import('./pages/cambioclave/cambioclave.module').then( m => m.CambioclavePageModule)
   },
+  {
+    path: 'crudjuegos',
+    loadChildren: () => import('./pages/crudjuegos/crudjuegos.module').then( m => m.CrudjuegosPageModule)
+  },
 
 ];
 
