@@ -1,35 +1,52 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="end">
-      <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink] = "['/carrito']"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink]="['/carrito']"></ion-back-button>
     </ion-buttons>
     <ion-title>
       Inicio
     </ion-title>
   </ion-toolbar>
-</ion-header> 
+</ion-header>
 
-<!--Contenido-->
 <ion-content [fullscreen]="true">
   <div class="home-container">
     <img src="assets/img/MegaGames.jpeg" alt="Game Controller" class="home-image" />
     <div class="button-grid">
-      <ion-button expand="block" class="grid-button" [routerLink] = "['/juegos']">
+      <ion-button expand="block" class="grid-button" [routerLink]="['/juegos']">
         <ion-icon name="game-controller-outline" slot="start"></ion-icon>
         Juegos
       </ion-button>
-      <ion-button expand="block" class="grid-button" [routerLink] = "['/consolas']">
+      <ion-button expand="block" class="grid-button" [routerLink]="['/consolas']">
         <ion-icon name="desktop-outline" slot="start"></ion-icon>
         Consolas
       </ion-button>
-      <ion-button expand="block" class="grid-button" [routerLink] = "['/juguetes']">
+      <ion-button expand="block" class="grid-button" [routerLink]="['/juguetes']">
         <ion-icon name="cube-outline" slot="start"></ion-icon>
         Juguetes
       </ion-button>
-      <ion-button expand="block" class="grid-button" [routerLink] = "['/perfil']">
+      <ion-button expand="block" class="grid-button" [routerLink]="['/perfil']">
         <ion-icon name="person-outline" slot="start"></ion-icon>
         Perfil
       </ion-button>
+    </div>
+  </div>
+
+  <!-- Swiper Slider -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let product of products">
+        <ion-card>
+          <img [src]="product.image" alt="{{ product.name }}" />
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+            <ion-card-subtitle>{{ product.price }}</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{ product.description }}
+          </ion-card-content>
+        </ion-card>
+      </div>
     </div>
   </div>
 </ion-content>

@@ -1,5 +1,5 @@
 ion-content {
-  --background: none; /* Asegúrate de que no haya un fondo predeterminado */
+  --background: none;
   background: linear-gradient(to bottom right, #3498db, #2ecc71);
 }
 
@@ -11,7 +11,7 @@ ion-content {
 .home-image {
   width: 50%;
   margin: 0 auto 20px;
-  border-radius: 20px; /* Borde redondeado */
+  border-radius: 20px;
 }
 
 .button-grid {
@@ -26,4 +26,46 @@ ion-content {
   --color: #333;
   --border-radius: 15px;
   font-size: 18px;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 300px; /* Ajusta la altura según sea necesario */
+  margin-top: 20px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card {
+  width: 90%;
+  height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+ion-card img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+ion-card-header {
+  padding-bottom: 0;
+}
+
+ion-card-title,
+ion-card-subtitle {
+  text-align: center;
+}
+
+ion-card-content {
+  text-align: center;
 }
