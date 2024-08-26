@@ -1,15 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-    </ion-buttons>
-    <ion-title>Agregar Juego</ion-title>
+    <ion-title>editarjuego</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="agregarjuego-container">
+  <div class="editarjuego-container">
       <ion-list>
-        <h1>Agregar Videojuego</h1>
+        <h1>Editar Videojuego</h1>
         <ion-item>
           <ion-label>Nombre del Videojuego</ion-label>
           <ion-input class="custom-input" type="text"></ion-input>
@@ -35,8 +33,7 @@
           <ion-input class="custom-input"type="url"></ion-input>
         </ion-item>
       </ion-list>
-
-      <ion-button expand="full">Agregar Videojuego</ion-button>
+      <ion-button class="boton" expand="full">Editar Videojuego</ion-button>
       <ion-button class="boton" expand="full" [routerLink]="['/crudjuegos']">
         Volver
       </ion-button>

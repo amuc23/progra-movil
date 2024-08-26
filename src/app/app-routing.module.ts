@@ -54,6 +54,14 @@ const routes: Routes = [
     path: 'agregarjuego',
     loadChildren: () => import('./pages/agregarjuego/agregarjuego.module').then( m => m.AgregarjuegoPageModule)
   },
+  {
+    path: 'editarjuego',
+    loadChildren: () => import('./pages/editarjuego/editarjuego.module').then( m => m.EditarjuegoPageModule)
+  },
+  {
+    path: 'eliminarjuego',
+    loadChildren: () => import('./pages/eliminarjuego/eliminarjuego.module').then( m => m.EliminarjuegoPageModule)
+  },
 
 ];
 

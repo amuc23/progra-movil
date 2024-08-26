@@ -1,0 +1,54 @@
+ion-content {
+    --background: none; /* Elimina cualquier fondo predeterminado del ion-content */
+    background: linear-gradient(to bottom right, #3498db, #2ecc71); /* Gradiente de azul a verde */
+    padding: 16px; /* Añade un poco de espacio alrededor del contenido */
+}
+.contenido-centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100%;
+    text-align: center; /* Centra el texto en la pantalla */
+  }
+  
+  ion-item {
+    max-width: 350px; /* Controla el ancho máximo del item */
+    width: 100%;
+  }
+  
+  ion-thumbnail {
+    width: 150px; /* Tamaño más grande del contenedor de la imagen */
+    height: 150px; /* Tamaño más grande del contenedor de la imagen */
+  }
+  
+  ion-thumbnail img {
+    width: 100%; /* Asegura que la imagen llene el contenedor */
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción de la imagen, recortando si es necesario */
+    border-radius: 10px;
+  }
+  
+  .botones-centrados {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px; /* Controla el ancho máximo de los botones */
+    gap: 10px; /* Espacio entre los botones */
+  }
+  
+  ion-label h2 {
+    font-size: 1.5em;  // Tamaño más grande para el nombre del videojuego
+    font-weight: bold;
+  }
+  
+  ion-label p {
+    font-size: 1.2em;  // Tamaño más grande para la descripción, consolas y precio
+  }
+  
+  .boton{
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --border-radius: 8px;
+    font-size: 1.2em;  // Tamaño más grande para el texto de los botones
+  }

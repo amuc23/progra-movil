@@ -6,7 +6,7 @@ ion-content {
 }
 
 /* Contenedor del formulario */
-.agregarjuego-container {
+.editarjuego-container {
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
@@ -49,7 +49,7 @@ ion-list {
     border-radius: 5px; /* Bordes redondeados */
 }
 
-ion-button {
+.boton{
     --padding-start: 16px;
     --padding-end: 16px;
     --border-radius: 8px;
