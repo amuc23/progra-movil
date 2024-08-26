@@ -1,41 +1,41 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>editarjuego</ion-title>
+    <ion-title>Editar Juego</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="editarjuego-container">
-      <ion-list>
-        <h1>Editar Videojuego</h1>
-        <ion-item>
-          <ion-label>Nombre del Videojuego</ion-label>
-          <ion-input class="custom-input" type="text"></ion-input>
-        </ion-item>
+    <ion-list>
+      <h1>Editar Videojuego</h1>
+      
+      <ion-item>
+        <ion-label>Nombre del Videojuego</ion-label>
+        <ion-input class="custom-input" type="text" [(ngModel)]="videojuego.nombre"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label>Descripción</ion-label>
-          <ion-textarea></ion-textarea>
-        </ion-item>
+      <ion-item>
+        <ion-label>Descripción</ion-label>
+        <ion-textarea [(ngModel)]="videojuego.descripcion"></ion-textarea>
+      </ion-item>
 
-        <ion-item>
-          <ion-label>Precio</ion-label>
-          <ion-input class="custom-input" type="number"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label>Precio</ion-label>
+        <ion-input class="custom-input" type="number" [(ngModel)]="videojuego.precio"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label>Consolas Compatibles</ion-label>
-          <ion-input class="custom-input" type="text"></ion-input>
-        </ion-item>
+      <ion-item>
+        <ion-label>Consolas Compatibles</ion-label>
+        <ion-input class="custom-input" type="text" [(ngModel)]="videojuego.consolas"></ion-input>
+      </ion-item>
 
-        <ion-item>
-          <ion-label>URL de la Imagen</ion-label>
-          <ion-input class="custom-input"type="url"></ion-input>
-        </ion-item>
-      </ion-list>
-      <ion-button class="boton" expand="full">Editar Videojuego</ion-button>
-      <ion-button class="boton" expand="full" [routerLink]="['/crudjuegos']">
-        Volver
-      </ion-button>
+      <ion-item>
+        <ion-label>URL de la Imagen</ion-label>
+        <ion-input class="custom-input" type="url" [(ngModel)]="videojuego.imagenUrl"></ion-input>
+      </ion-item>
+      
+    </ion-list>
+
+    <ion-button class="boton" expand="full" [routerLink]="['/crudjuegos']">Volver</ion-button>
   </div>
 </ion-content>

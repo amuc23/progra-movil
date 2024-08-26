@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarjuegoPage implements OnInit {
 
+  videojuego = {
+    nombre: 'Juego A',
+    precio: 29.99,
+    descripcion: 'Descripción del Juego A',
+    imagenUrl: 'assets/img/caratula-hollow.jpeg',
+    consolas: 'PlayStation, Xbox'
+  };
+
   constructor() { }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() { }
 }
