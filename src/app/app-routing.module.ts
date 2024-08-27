@@ -22,7 +22,8 @@ const routes: Routes = [
   {
     path: 'juegos',
     loadChildren: () => import('./pages/juegos/juegos.module').then( m => m.JuegosPageModule)
-  },  {
+  },
+  {
     path: 'carrito',
     loadChildren: () => import('./pages/carrito/carrito.module').then( m => m.CarritoPageModule)
   },
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'eliminarjuego',
     loadChildren: () => import('./pages/eliminarjuego/eliminarjuego.module').then( m => m.EliminarjuegoPageModule)
+  },
+  {
+    path: 'paneladmin',
+    loadChildren: () => import('./pages/paneladmin/paneladmin.module').then( m => m.PaneladminPageModule)
   },
   {
     path: 'modificarperfil',
