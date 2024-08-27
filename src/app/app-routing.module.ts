@@ -66,6 +66,38 @@ const routes: Routes = [
     path: 'paneladmin',
     loadChildren: () => import('./pages/paneladmin/paneladmin.module').then( m => m.PaneladminPageModule)
   },
+  {
+    path: 'crudconsolas',
+    loadChildren: () => import('./pages/crudconsolas/crudconsolas.module').then( m => m.CrudconsolasPageModule)
+  },
+  {
+    path: 'agregarconsola',
+    loadChildren: () => import('./pages/agregarconsola/agregarconsola.module').then( m => m.AgregarconsolaPageModule)
+  },
+  {
+    path: 'eliminarconsola',
+    loadChildren: () => import('./pages/eliminarconsola/eliminarconsola.module').then( m => m.EliminarconsolaPageModule)
+  },
+  {
+    path: 'editarconsola',
+    loadChildren: () => import('./pages/editarconsola/editarconsola.module').then( m => m.EditarconsolaPageModule)
+  },
+  {
+    path: 'crudjuguetes',
+    loadChildren: () => import('./pages/crudjuguetes/crudjuguetes.module').then( m => m.CrudjuguetesPageModule)
+  },
+  {
+    path: 'agregarjuguete',
+    loadChildren: () => import('./pages/agregarjuguete/agregarjuguete.module').then( m => m.AgregarjuguetePageModule)
+  },
+  {
+    path: 'eliminarjuguete',
+    loadChildren: () => import('./pages/eliminarjuguete/eliminarjuguete.module').then( m => m.EliminarjuguetePageModule)
+  },
+  {
+    path: 'editarjuguete',
+    loadChildren: () => import('./pages/editarjuguete/editarjuguete.module').then( m => m.EditarjuguetePageModule)
+  },
 
 ];
 

@@ -1,41 +1,39 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <!-- Botón de regreso con texto "Volver" -->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/home']"></ion-back-button>
     </ion-buttons>
-    <ion-title>CRUD Videojuegos</ion-title>
+    <ion-title>CRUD Consolas</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- Botón para agregar un nuevo videojuego, ubicado antes de la lista -->
+  <!-- Botón para agregar una nueva Consolas, ubicado antes de la lista -->
   <div class="add-button-container">
-    <ion-button [routerLink]="['/agregarjuego']">
+    <ion-button [routerLink]="['/agregarconsola']">
       <ion-icon slot="start" name="add"></ion-icon>
-      Agregar Videojuego
+      Agregar Consola
     </ion-button>
   </div>
 
-  <!-- Lista de videojuegos -->
+  <!-- Lista de Consolas -->
   <ion-list>
-    <ion-item *ngFor="let videojuego of videojuegos">
+    <ion-item *ngFor="let consola of consolas">
       <ion-thumbnail slot="start">
-        <img [src]="videojuego.imagenUrl" alt="{{ videojuego.nombre }}">
+        <img [src]="consola.imagenUrl" alt="{{ consola.nombre }}">
       </ion-thumbnail>
       <ion-label>
-        <h2>{{ videojuego.nombre }}</h2>
-        <p>{{ videojuego.descripcion }}</p>
-        <p><strong>Precio:</strong> {{ videojuego.precio }}</p>
-        <p><strong>stock:</strong> {{ videojuego.stock }}</p>
-        <p><strong>Consolas:</strong> {{ videojuego.consolas }}</p>
+        <h2>{{ consola.nombre }}</h2>
+        <p>{{ consola.descripcion }}</p>
+        <p><strong>Precio:</strong> {{ consola.precio }}</p>
+        <p><strong>Stock:</strong> {{ consola.stock }}</p>
       </ion-label>
       <!-- Botones de acción para editar y eliminar -->
       <ion-buttons slot="end">
-        <ion-button [routerLink]="['/editarjuego']">
+        <ion-button [routerLink]="['/editarconsola']">
           <ion-icon slot="icon-only" name="create"></ion-icon>
         </ion-button>
-        <ion-button color="danger" [routerLink]="['/eliminarjuego']">
+        <ion-button color="danger" [routerLink]="['/eliminarconsola']">
           <ion-icon slot="icon-only" name="trash"></ion-icon>
         </ion-button>
       </ion-buttons>
