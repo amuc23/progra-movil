@@ -1,7 +1,9 @@
 ion-content {
-    --background: none; 
-    background: linear-gradient(to bottom right, #3498db, #2ecc71);
-  }
+  --background: none;
+  background: linear-gradient(to bottom right, #121212, #007bff); /* Gris oscuro a azul brillante */
+  color: #e0e0e0; /* Texto gris claro */
+}
+
 
 .profile-image {
     width: 100px;

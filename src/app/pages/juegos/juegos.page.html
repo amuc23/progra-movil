@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button text="Atras" icon="arrow-back-outline"[routerLink] = "['/home']"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/home']"></ion-back-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink] = "['/carrito']"></ion-back-button>
@@ -13,7 +13,7 @@
 <!--------------------------------------------------->
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar class="custom-searchbar"></ion-searchbar>
+  <ion-searchbar ></ion-searchbar>
   <ion-card class="videojuego-card">
     <ion-item lines="none" class="videojuego-item">
       <ion-thumbnail slot="start" class="thumbnail-grande">
