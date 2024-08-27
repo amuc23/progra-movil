@@ -2,10 +2,7 @@
   <ion-toolbar>
     <!-- Botón de regreso con texto "Volver" -->
     <ion-buttons slot="start">
-      <ion-button [routerLink]="['/']">
-        <ion-icon slot="start" name="arrow-back"></ion-icon>
-        Volver
-      </ion-button>
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/home']"></ion-back-button>
     </ion-buttons>
     <ion-title>CRUD Videojuegos</ion-title>
   </ion-toolbar>
