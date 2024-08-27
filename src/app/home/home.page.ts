@@ -11,7 +11,7 @@ export class HomePage implements AfterViewInit {
     slidesPerView: 1.2, // Muestra más de una tarjeta parcialmente visible
     spaceBetween: 2,   // Espacio entre las tarjetas
     centeredSlides: true,
-    loop: false,         // Hace que las tarjetas no se repitan en un bucle
+    loop: true,         // Hace que las tarjetas no se repitan en un bucle
   };
 
   products = [

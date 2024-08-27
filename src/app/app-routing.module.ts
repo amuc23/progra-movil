@@ -62,6 +62,26 @@ const routes: Routes = [
     path: 'eliminarjuego',
     loadChildren: () => import('./pages/eliminarjuego/eliminarjuego.module').then( m => m.EliminarjuegoPageModule)
   },
+  {
+    path: 'modificarperfil',
+    loadChildren: () => import('./pages/modificarperfil/modificarperfil.module').then( m => m.ModificarperfilPageModule)
+  },
+  {
+    path: 'listadeseos',
+    loadChildren: () => import('./pages/listadeseos/listadeseos.module').then( m => m.ListadeseosPageModule)
+  },
+  {
+    path: 'historialcompras',
+    loadChildren: () => import('./pages/historialcompras/historialcompras.module').then( m => m.HistorialcomprasPageModule)
+  },
+  {
+    path: 'resecnas',
+    loadChildren: () => import('./pages/resecnas/resecnas.module').then( m => m.ResecnasPageModule)
+  },
+  {
+    path: 'juegounico',
+    loadChildren: () => import('./pages/juegounico/juegounico.module').then( m => m.JuegounicoPageModule)
+  },
 
 ];
 

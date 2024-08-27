@@ -14,6 +14,19 @@
     </ion-card-header>
     <ion-card-content>
       <p class="username">Nombre de Usuario: Juanito</p>
+      
+      <ion-button expand="block" [routerLink] = "['/modificarperfil']">
+        Modificar Perfil
+      </ion-button>
+      <ion-button expand="block" color="danger" [routerLink] = "['/listadeseos']">
+        Lista de Deseos
+      </ion-button>
+      <ion-button expand="block" color="danger" [routerLink] = "['/historialcompras']">
+        Historial de Compras
+      </ion-button>
+      <ion-button expand="block" color="danger" [routerLink] = "['/resecnas']">
+        Mis Reseñas
+      </ion-button>
       <ion-button expand="block" color="danger" [routerLink] = "['/login']">
         Cerrar Sesión
       </ion-button>
