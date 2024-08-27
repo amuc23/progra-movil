@@ -62,6 +62,10 @@ const routes: Routes = [
     path: 'eliminarjuego',
     loadChildren: () => import('./pages/eliminarjuego/eliminarjuego.module').then( m => m.EliminarjuegoPageModule)
   },
+  {
+    path: 'paneladmin',
+    loadChildren: () => import('./pages/paneladmin/paneladmin.module').then( m => m.PaneladminPageModule)
+  },
 
 ];
 
