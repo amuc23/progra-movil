@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Agregar Consola</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="agregarconsola-container">
+    <ion-list>
+      <h1>Agregar Consola</h1>
+      <ion-item>
+        <ion-label>Nombre de la consola</ion-label>
+        <ion-input class="custom-input" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Descripción</ion-label>
+        <ion-textarea></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Precio</ion-label>
+        <ion-input class="custom-input" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Stock</ion-label>
+        <ion-input class="custom-input" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>URL de la Imagen</ion-label>
+        <ion-input class="custom-input"type="url"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button class="boton" expand="full">Agregar Juego</ion-button>
+    <ion-button class="boton" expand="full" [routerLink]="['/crudconsolas']">
+      Volver
+    </ion-button>
+</div>
+</ion-content>

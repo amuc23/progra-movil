@@ -1,33 +1,38 @@
 <ion-header>
-  <ion-buttons slot="start">
-    <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink] = "['/home']"></ion-back-button>
-  </ion-buttons>
   <ion-toolbar>
-    <ion-title>Perfil del Usuario</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink]="['/carrito']"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-card>
+<ion-content [fullscreen]="true">
+  <ion-card >
     <ion-card-header>
       <ion-img src="assets/img/Zero.png" alt="Imagen de perfil" class="profile-image"></ion-img>
     </ion-card-header>
-    <ion-card-content>
-      <p class="username">Nombre de Usuario: Juanito</p>
-      
-      <ion-button expand="block" [routerLink] = "['/modificarperfil']">
-        Modificar Perfil
-      </ion-button>
-      <ion-button expand="block" color="danger" [routerLink] = "['/listadeseos']">
-        Lista de Deseos
-      </ion-button>
-      <ion-button expand="block" color="danger" [routerLink] = "['/historialcompras']">
-        Historial de Compras
-      </ion-button>
-      <ion-button expand="block" color="danger" [routerLink] = "['/resecnas']">
-        Mis Reseñas
-      </ion-button>
-      <ion-button expand="block" color="danger" [routerLink] = "['/login']">
+    <ion-card-content >
+      <p class="username">Usuario: Juanito</p>
+      <p class="email">Correo: juanito&#64;example.com</p> 
+      <div class="perfil-container" >
+        <ion-button expand="block" class="btnOpsPerfil" [routerLink] = "['/modificarperfil']">
+          Modificar Perfil
+        </ion-button>
+        <ion-button expand="block" class="btnOpsPerfil" [routerLink] = "['/listadeseos']">
+          Lista de Deseos
+        </ion-button>
+        <ion-button expand="block" class="btnOpsPerfil" [routerLink] = "['/historialcompras']">
+          Historial de Compras
+        </ion-button>
+        <ion-button expand="block" class="btnOpsPerfil" [routerLink] = "['/resecnas']">
+          Mis Reseñas
+        </ion-button>
+      </div>
+      <ion-button class="btnCS" expand="block" color="danger" [routerLink] = "['/login']">
         Cerrar Sesión
       </ion-button>
     </ion-card-content>

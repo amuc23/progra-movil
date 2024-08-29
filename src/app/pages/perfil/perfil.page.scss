@@ -5,8 +5,8 @@ ion-content {
 
 
 .profile-image {
-    width: 100px;
-    height: 100px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     display: block;
     margin: 0 auto 16px auto;
@@ -36,5 +36,23 @@ ion-content {
     --border-radius: 8px;
     color: black;
   }
+
+  .perfil-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+  
+  .btnOpsPerfil {
+    height: 80px;
+    background: #007bff;
+    color: white;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+
+  
+
+  
 
   

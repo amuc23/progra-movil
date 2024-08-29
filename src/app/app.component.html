@@ -20,37 +20,38 @@
 
         <!--RESPTERAR LA SINTAXIS-->
         <ion-item [routerDirection]="'root'" [routerLink]="'/home'">
-          <ion-icon name="home"></ion-icon>
-          <ion-label>Pagina Home</ion-label>
+          <ion-icon name="home" slot="start"></ion-icon>
+          <ion-label>Home</ion-label>
         </ion-item>
 
         <!--item2-->
         <ion-item [routerDirection]="'root'" [routerLink]="'/perfil'">
-          <ion-icon name="contact"></ion-icon>
+          <ion-icon name="person-circle-outline" slot="start"></ion-icon>
           <ion-label>Perfil</ion-label>
         </ion-item>
 
         <!--item3-->
         <ion-item [routerDirection]="'root'" [routerLink]="'/juegos'">
-          <ion-icon name="alert-circle-outline"></ion-icon>
+          <ion-icon name="game-controller-outline" slot="start"></ion-icon>
           <ion-label>Juegos</ion-label>
         </ion-item>
 
         <!--item4-->
         <ion-item [routerDirection]="'root'" [routerLink]="'/consolas'">
-          <ion-icon name="alert-circle-outline"></ion-icon>
-          <ion-label>consolas</ion-label>
+          <ion-icon name="desktop-outline" slot="start"></ion-icon>
+          <ion-label>Consolas</ion-label>
         </ion-item>
 
         <!--item5-->
         <ion-item [routerDirection]="'root'" [routerLink]="'/juguetes'">
-          <ion-icon name="alert-circle-outline"></ion-icon>
+          <ion-icon name="cube-outline" slot="start"></ion-icon>
           <ion-label>Juguetes</ion-label>
         </ion-item>
 
+        <!--RECORDAR EDITAR EL USERNAME JOJO EN EL TS DE APP-->
         <!--item6-->
-        <ion-item [routerDirection]="'root'" [routerLink]="'/juguetes'">
-          <ion-icon name="alert-circle-outline"></ion-icon>
+        <ion-item *ngIf="username !== 'JOJO'" [routerDirection]="'root'" [routerLink]="'/paneladmin'">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
           <ion-label>Edición</ion-label>
         </ion-item>
 

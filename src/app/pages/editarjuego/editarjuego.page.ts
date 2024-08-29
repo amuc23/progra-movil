@@ -12,7 +12,8 @@ export class EditarjuegoPage implements OnInit {
     precio: 29.99,
     descripcion: 'Descripción del Juego A',
     imagenUrl: 'assets/img/caratula-hollow.jpeg',
-    consolas: 'PlayStation, Xbox'
+    consolas: 'PlayStation, Xbox',
+    stock: 20
   };
 
   constructor() { }

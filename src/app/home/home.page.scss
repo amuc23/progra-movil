@@ -3,6 +3,42 @@ ion-content {
   background: linear-gradient(to bottom right, #121212, #007bff); /* Gris oscuro a azul brillante */
 }
 
+//sliders (titulos)
+
+.videojuegos-oferta {
+  display: inline-block; /* Hace que el elemento se expanda horizontalmente */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border-bottom: 2px solid white; /* Línea en la parte inferior para destacar el texto */
+  padding-bottom: 10px; /* Espacio debajo del texto */
+  margin: 0; /* Elimina el margen predeterminado */
+  color: white;
+}
+
+.consolas-oferta {
+  display: inline-block; /* Hace que el elemento se expanda horizontalmente */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border-bottom: 2px solid white; /* Línea en la parte inferior para destacar el texto */
+  padding-bottom: 10px; /* Espacio debajo del texto */
+  margin: 0; /* Elimina el margen predeterminado */
+  color: white;
+}
+
+.juguetes-oferta {
+  display: inline-block; /* Hace que el elemento se expanda horizontalmente */
+  width: 100%; /* Ocupa el 100% del ancho disponible */
+  text-align: left; /* Alinea el texto a la izquierda */
+  border-bottom: 2px solid white; /* Línea en la parte inferior para destacar el texto */
+  padding-bottom: 10px; /* Espacio debajo del texto */
+  margin: 0; /* Elimina el margen predeterminado */
+  color: white;
+}
+
+//sliders (titulos)
+
+
+
 .home-container {
   text-align: center;
   padding: 20px;
@@ -12,20 +48,6 @@ ion-content {
   width: 50%;
   margin: 0 auto 20px;
   border-radius: 20px;
-}
-
-.button-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-}
-
-.grid-button {
-  height: 80px;
-  --background: #007bff; /* Azul brillante */
-  --color: #e0e0e0; /* Texto gris claro */
-  --border-radius: 15px;
-  font-size: 18px;
 }
 
 .swiper-container {
@@ -50,11 +72,12 @@ ion-card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-ion-card img {
-  width: 100%;
+ion-card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
   height: auto;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 ion-card-header {
@@ -64,6 +87,8 @@ ion-card-header {
 ion-card-title,
 ion-card-subtitle {
   text-align: center;
+  font-size: 18px;
+  color: black;
 }
 
 ion-card-content {
