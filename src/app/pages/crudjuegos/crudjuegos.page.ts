@@ -12,7 +12,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Juego A',
       precio: 29.99,
       descripcion: 'Descripción del Juego A',
-      imagenUrl: 'assets/img/caratula-hollow.jpeg',
+      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',
       stock: 35
     },
@@ -20,7 +20,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Juego B',
       precio: 49.99,
       descripcion: 'Descripción del Juego B',
-      imagenUrl: 'assets/img/caratula-hollow.jpeg',
+      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PC, Nintendo Switch',
       stock: 20
     },
@@ -28,7 +28,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Juego C',
       precio: 19.99,
       descripcion: 'Descripción del Juego C',
-      imagenUrl: 'assets/img/caratula-hollow.jpeg',
+      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox, PC',
       stock: 50
     },
@@ -36,7 +36,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Juego D',
       precio: 39.99,
       descripcion: 'Descripción del Juego D',
-      imagenUrl: 'assets/img/caratula-hollow.jpeg',
+      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'Nintendo Switch, PC',
       stock: 25
     },
@@ -44,7 +44,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Juego E',
       precio: 59.99,
       descripcion: 'Descripción del Juego E',
-      imagenUrl: 'assets/img/caratula-hollow.jpeg',
+      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',
       stock: 15
     }

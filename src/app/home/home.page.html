@@ -41,11 +41,64 @@
       </div>
     </div>
 
-    <div style="height: 180px;"></div> 
+    <div style="height: 80px;"></div> 
     <!------------------------------------------------------------->
 
-    
+    <!-- Swiper Slider (titulo)-->
+    <h4 class="consolas-oferta">Ofertas Consolas</h4>
+    <!-- Swiper Slider (contenido)-->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let colec_consolas of colec_consolas">
+          <ion-card>
+            <img [src]="colec_consolas.imgC" alt="img juegos" />
+            <ion-card-header>
+              <ion-card-title>{{ colec_consolas.precioC }}</ion-card-title>
+              <ion-card-subtitle>{{ colec_consolas.nomC}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button>
+                <ion-icon name="cart-outline"></ion-icon>
+                Añadir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </div>
 
+    <div style="height: 80px;"></div> 
+    <!------------------------------------------------------------->
+
+    <!-- Swiper Slider (titulo)-->
+    <h4 class="juguetes-oferta">Ofertas Juguetes</h4>
+    <!-- Swiper Slider (contenido)-->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let colec_juguetes of colec_juguetes">
+          <ion-card>
+            <img class="imgcardJT" [src]="colec_juguetes.imgJT" alt="img juguetes" />
+            <ion-card-header>
+              <ion-card-title>{{ colec_juguetes.precioJT }}</ion-card-title>
+              <ion-card-subtitle>{{ colec_juguetes.nomJT}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-button>
+                <ion-icon name="cart-outline"></ion-icon>
+                Añadir
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 80px;"></div> 
+    <!------------------------------------------------------------->
+
+    <img src="assets/img/swiper1.jpeg" alt="NEWS" class="imgNEWS" />
+
+    
     <!--Slider de noticias-->
 
     <!-- fin home container-->

@@ -87,10 +87,15 @@ ion-card-header {
 ion-card-title,
 ion-card-subtitle {
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
   color: black;
 }
 
 ion-card-content {
   text-align: center;
+}
+
+.imgcardJ{
+  height: fit-content;
+  width: fit-content;
 }

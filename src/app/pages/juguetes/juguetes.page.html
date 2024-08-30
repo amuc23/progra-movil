@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline"[routerLink] = "['/home']"></ion-back-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/" text="Carrito" icon="cart-outline" [routerLink] = "['/carrito']"></ion-back-button>
@@ -9,6 +9,8 @@
     <ion-title>Catalogo de Juguetes</ion-title>
   </ion-toolbar>
 </ion-header>
+
+<!--------------------------------------------------->
 
 <ion-content [fullscreen]="true">
   <ion-searchbar></ion-searchbar>

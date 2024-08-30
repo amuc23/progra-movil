@@ -49,8 +49,14 @@
         </ion-item>
 
         <!--RECORDAR EDITAR EL USERNAME JOJO EN EL TS DE APP-->
-        <!--item6-->
+        <!--item6
         <ion-item *ngIf="username !== 'JOJO'" [routerDirection]="'root'" [routerLink]="'/paneladmin'">
+          <ion-icon name="key-outline" slot="start"></ion-icon>
+          <ion-label>Edición</ion-label>
+        </ion-item>-->
+
+        <!--item6-->
+        <ion-item [routerDirection]="'root'" [routerLink]="'/paneladmin'">
           <ion-icon name="key-outline" slot="start"></ion-icon>
           <ion-label>Edición</ion-label>
         </ion-item>

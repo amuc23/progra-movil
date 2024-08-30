@@ -8,8 +8,8 @@ import Swiper from 'swiper'; // Muestra más de una tarjeta parcialmente visible
 })
 export class HomePage implements AfterViewInit {
   slideOpts = {
-    slidesPerView: 1.2, // Muestra más de una tarjeta parcialmente visible
-    spaceBetween: 2,   // Espacio entre las tarjetas
+    slidesPerView: 1.9, // Muestra más de una tarjeta parcialmente visible
+    spaceBetween: 4,   // Espacio entre las tarjetas
     centeredSlides: true,
     loop: true,         // Hace que las tarjetas no se repitan en un bucle
   };
@@ -40,9 +40,9 @@ export class HomePage implements AfterViewInit {
       imgJ: 'assets/img/juegos/caratula-liesofp.jpeg'
     },
     {
-      nomJ: 'Legends Arceus',
+      nomJ: 'Kakarot',
       precioJ: '$50.900',
-      imgJ: 'assets/img/juegos/leyendas-pokemon-arceus.jpg'
+      imgJ: 'assets/img/juegos/dbz-kakaroto-portada.jpg'
     },
     {
       nomJ: 'Gears Of War',
@@ -56,34 +56,34 @@ export class HomePage implements AfterViewInit {
   ////////////COLECCION DE CONSOLAS//////////////////////
   colec_consolas = [
     {
-      name: 'Producto 1',
-      price: '$10.99',
-      image: 'assets/img/juegos/caratula-hollow.jpeg'
+      nomC: 'Ps2',
+      precioC: '$150.000',
+      imgC: 'assets/img/consolas/ps2-consola.jpg'
     },
     {
-      name: 'Producto 2',
-      price: '$20.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomC: '2dsXL',
+      precioC: '$210.000',
+      imgC: 'assets/img/consolas/2dsXL-consola.jpg'
     },
     {
-      name: 'Producto 3',
-      price: '$30.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomC: 'Nintendo Switch',
+      precioC: '$400.000',
+      imgC: 'assets/img/consolas/nintendosw-1.jpeg'
     },
     {
-      name: 'Producto 4',
-      price: '$40.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomC: 'Ps4',
+      precioC: '$400.000',
+      imgC: 'assets/img/consolas/ps4-1.jpeg'
     },
     {
-      name: 'Producto 5',
-      price: '$50.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomC: 'Sega Genesis',
+      precioC: '$80.000',
+      imgC: 'assets/img/consolas/sega-genesis-consola.jpg'
     },
     {
-      name: 'Producto 6',
-      price: '$50.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomC: 'Wii',
+      precioC: '$120.000',
+      imgC: 'assets/img/consolas/wii-1.jpeg'
     }
   ];
   ///////////////////////////////////////////////////////////
@@ -92,34 +92,34 @@ export class HomePage implements AfterViewInit {
   ///////////////////////////////////////////////////////////
   colec_juguetes = [
     {
-      name: 'Producto 1',
-      price: '$10.99',
-      image: 'assets/img/juegos/caratula-hollow.jpeg'
+      nomJT: 'Batman Armored',
+      precioJT: '$550.000',
+      imgJT: 'assets/img/juguetes/Batman-juguete.jpg'
     },
     {
-      name: 'Producto 2',
-      price: '$20.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomJT: 'Coronel Sanders',
+      precioJT: '$20.000',
+      imgJT: 'assets/img/juguetes/coronel-juguete.jpg'
     },
     {
-      name: 'Producto 3',
-      price: '$30.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomJT: 'Kirby Amiibo',
+      precioJT: '$85.000',
+      imgJT: 'assets/img/juguetes/akirby-juguete.jpg'
     },
     {
-      name: 'Producto 4',
-      price: '$40.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomJT: 'Kratos',
+      precioJT: '$40.000',
+      imgJT: 'assets/img/juguetes/Kratos2.jpg'
     },
     {
-      name: 'Producto 5',
-      price: '$50.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomJT: 'Samus',
+      precioJT: '$50.600',
+      imgJT: 'assets/img/juguetes/samus1.jpg'
     },
     {
-      name: 'Producto 6',
-      price: '$50.99',
-      image: 'assets/img/caratula-hollow.jpeg'
+      nomJT: 'Spiderman No Way Home',
+      precioJT: '$50.99',
+      imgJT: 'assets/img/juguetes/spiderman-juguete.jpg'
     }
   ];
 

@@ -118,7 +118,15 @@ const routes: Routes = [
   {
     path: 'juegounico',
     loadChildren: () => import('./pages/juegounico/juegounico.module').then( m => m.JuegounicoPageModule)
+  },  {
+    path: 'jugueteunico',
+    loadChildren: () => import('./pages/jugueteunico/jugueteunico.module').then( m => m.JugueteunicoPageModule)
   },
+  {
+    path: 'consolaunica',
+    loadChildren: () => import('./pages/consolaunica/consolaunica.module').then( m => m.ConsolaunicaPageModule)
+  },
+
 
 ];
 

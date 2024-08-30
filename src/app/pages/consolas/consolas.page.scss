@@ -1,4 +1,64 @@
+.consola-card {
+  background: #87a6e9d8; /* Fondo transparente de la tarjeta */
+  border: 6px solid #175aa79c; /* Borde del cuadro */
+  border-radius: 8px; /* Esquinas redondeadas */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.815); /* Sombra del cuadro */
+  margin: 15px; /* Espaciado externo */
+}
+
+.thumbnail-grande{
+  width: 40%; /* Tamaño más grande de la imagen */
+  height: 40%; 
+  object-fit: cover; /* Asegura que la imagen cubra completamente el espacio */
+  border-radius: 8px; /* Esquinas redondeadas de la imagen */
+}
+
+.consola-item {
+  align-items: center; /* Alinea verticalmente los elementos */
+  padding-bottom: 10px; /* Espacio adicional debajo de los detalles/
+}
+
+.consola-card h2 {
+  font-size: 1.2rem; /* Tamaño del nombre del*/
+  font-weight: bold; /* Texto en negrita */
+}
+
+.consola-card p {
+  font-size: 1rem; /* Tamaño del texto del precio */
+  color: #ffffff; /* Color del texto */
+}
+
+.add-cart-item ion-button {
+  font-size: 1rem; /* Tamaño del texto del botón */
+  --background: #000000; /* Color de fondo del botón */
+  --color: white; /* Color del texto del botón */
+}
+
+.add-cart-item ion-icon {
+  font-size: 1.2rem; /* Tamaño del icono del carrito */
+}
+
+/* Agregar transparencia al ion-item */
+ion-item {
+  --background: #ebebeb00; /* Fondo transparente */
+}
+
 ion-content {
   --background: none;
   background: linear-gradient(to bottom right, #121212, #007bff); /* Gris oscuro a azul brillante */
 }
+
+
+.custom-searchbar input {
+  --padding-start: 10px; /* Espaciado al inicio del input */
+  --padding-end: 10px; /* Espaciado al final del input */
+  --margin: 0px; /* Margen del input */
+}
+
+ion-searchbar {
+  --color: white;
+  --placeholder-color: rgba(255, 255, 255, 0.5); /* Cambiar el color del placeholder */
+  --cancel-button-color: white; /* Color del botón de cancelar */
+}
+

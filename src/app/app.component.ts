@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  username: string = 'JOJO';
+  //username: string = 'JOJO';
+
+  //var inicializada pero vacía
+  username!:string;
   constructor() {}
 }
