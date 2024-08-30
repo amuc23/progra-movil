@@ -126,6 +126,10 @@ const routes: Routes = [
     path: 'consolaunica',
     loadChildren: () => import('./pages/consolaunica/consolaunica.module').then( m => m.ConsolaunicaPageModule)
   },
+  {
+    path: 'ayudacliente',
+    loadChildren: () => import('./pages/ayudacliente/ayudacliente.module').then( m => m.AyudaclientePageModule)
+  },
 
 
 ];

@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swiper from 'swiper'; // Muestra más de una tarjeta parcialmente visible esto se instala con un npm install swiper
 
 @Component({
@@ -13,6 +14,7 @@ export class HomePage implements AfterViewInit {
     centeredSlides: true,
     loop: true,         // Hace que las tarjetas no se repitan en un bucle
   };
+  
   
 
   //COLECCIONES DE PRODUCTOS
@@ -123,9 +125,9 @@ export class HomePage implements AfterViewInit {
     }
   ];
 
-  username: string = 'JOJO';
+  usernamelogged!:string;
 
-  constructor() {}
+  constructor(private router: Router, private activedroute: ActivatedRoute) {}
 
   ngAfterViewInit() {
     new Swiper('.swiper-container', this.slideOpts);

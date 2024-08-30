@@ -18,11 +18,11 @@
     <ion-list>
       <ion-item>
         <ion-label>Usuario</ion-label>
-        <ion-input type="email" id="email" name="email" required></ion-input>
+        <ion-input type="email" id="email" name="email" required [(ngModel)]="usernameunlogged"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Contraseña</ion-label>
-        <ion-input type="password" label="" value="">
+        <ion-input type="password" label="" value="" required [(ngModel)]="usernameunlogged">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
       </ion-item>
