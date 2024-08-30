@@ -128,6 +128,7 @@ export class HomePage implements AfterViewInit {
   usernamelogged!:string;
 
   constructor(private router: Router, private activedroute: ActivatedRoute) {}
+  
 
   ngAfterViewInit() {
     new Swiper('.swiper-container', this.slideOpts);

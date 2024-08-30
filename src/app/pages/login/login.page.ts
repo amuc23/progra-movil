@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
@@ -12,8 +13,8 @@ export class LoginPage implements OnInit {
   //usernameunlogged!:string;
 
   //credenciales para entrar
-  Usuario_registrado:string="macaco";
-  password_registrado:string ="potato123";
+  Usuario_registrado:string="admin";
+  password_registrado:string ="123";
 
   //vars para escribir
   usernameunlogged:string="";
@@ -26,7 +27,10 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
+  
+
   loggin(){
+    if (this.usernameunlogged === this.Usuario_registrado && this.password === this.password_registrado) {
     let navigationextras: NavigationExtras = {
       state:{
         userconect: this.usernameunlogged
@@ -34,6 +38,19 @@ export class LoginPage implements OnInit {
     };
 
     this.router.navigate(['/perfil'], navigationextras);
+  } else {
+    this.presentAlert('Usuario / contraseña Incorrectos','Intente nuevamente');
+  }
+  }
+
+  async presentAlert(titulo:string,msj:string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      message: msj,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 
 }
