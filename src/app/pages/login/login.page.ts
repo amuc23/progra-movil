@@ -1,7 +1,5 @@
-import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,49 +7,35 @@ import { AlertController, ToastController } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  // Usuario y contraseña predefinidos para la autenticación
+  Usuario_registrado: string = "admin";
+  password_registrado: string = "123";
 
-  //usernameunlogged!:string;
+  // Variables de enlace para el formulario de inicio de sesión
+  usernameunlogged: string = "";
+  password: string = "";
+  // Variable para mostrar un mensaje de error en caso de credenciales incorrectas
+  loginError: boolean = false;
 
-  //credenciales para entrar
-  Usuario_registrado:string="admin";
-  password_registrado:string ="123";
+  constructor(private router: Router) {}
 
-  //vars para escribir
-  usernameunlogged:string="";
-  password:string ="";
+  ngOnInit() {}
 
-  constructor(private router:Router, private alertController: AlertController, private toastController: ToastController) { 
-    
-  }
-
-  ngOnInit() {
-  }
-
-  
-
-  loggin(){
+  // Método que maneja el proceso de inicio de sesión
+  loggin() {
+    // Compara las credenciales ingresadas con las predefinidas
     if (this.usernameunlogged === this.Usuario_registrado && this.password === this.password_registrado) {
-    let navigationextras: NavigationExtras = {
-      state:{
-        userconect: this.usernameunlogged
-      }
-    };
-
-    this.router.navigate(['/perfil'], navigationextras);
-  } else {
-    this.presentAlert('Usuario / contraseña Incorrectos','Intente nuevamente');
+      // Prepara los datos para pasar a la siguiente página usando NavigationExtras
+      let navigationextras: NavigationExtras = {
+        state: { userconect: this.usernameunlogged }
+      };
+      // Navega a la página de perfil pasando el estado
+      this.router.navigate(['/perfil'], navigationextras);
+      // Oculta el mensaje de error si el inicio de sesión es exitoso
+      this.loginError = false;
+    } else {
+      // Muestra un mensaje de error si las credenciales son incorrectas
+      this.loginError = true;
+    }
   }
-  }
-
-  async presentAlert(titulo:string,msj:string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: msj,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
-
 }
-

@@ -1,24 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-    </ion-buttons>
+    <ion-buttons slot="start"></ion-buttons>
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!--espacio-->
   <div class="spacer"></div>
-  <!--espacio-->
   <div class="spacer"></div>
   
-  <!--contenido-->
   <div class="login-container">
     <h2 style="color: white;">Login</h2>
     <ion-list>
       <ion-item>
         <ion-label>Usuario</ion-label>
-        <ion-input id="username" name="email" required [(ngModel)]="usernameunlogged" ></ion-input>
+        <ion-input id="username" name="email" required [(ngModel)]="usernameunlogged"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Contraseña</ion-label>
@@ -28,7 +24,8 @@
       </ion-item>
       <ion-button expand="block" (click)="loggin()">Ingresar</ion-button>
     </ion-list>
+    <p *ngIf="loginError" style="color: red;">Usuario o contraseña incorrectos. Intente nuevamente.</p>
     <p>No tienes cuenta? <a routerLink="/registro">Regístrate aquí!</a></p>
-    <p>No recuerdas tu clave? <a routerLink="/recuperar">Recuperala aqui</a></p>
+    <p>No recuerdas tu clave? <a routerLink="/recuperar">Recupérala aquí</a></p>
   </div>
 </ion-content>

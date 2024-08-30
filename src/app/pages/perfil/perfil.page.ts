@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-perfil',
@@ -7,45 +7,20 @@ import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
   styleUrls: ['./perfil.page.scss'],
 })
 export class PerfilPage implements OnInit {
+  // Variable para almacenar el nombre del usuario logueado
+  userF: string = "";
 
-  userLg: string = " "; 
+  // Inyecta el servicio Router en el constructor para manejar la navegación
+  constructor(private router: Router) { }
 
-  userF: string = " ";
-
-
-
-  constructor(private router: Router, private activedroute: ActivatedRoute) { 
-    //realizar la captura de la informacion que viene por navigationExtras
-    this.activedroute.queryParams.subscribe(param =>{
-      //validamos si viene o no información
-      if(this.router.getCurrentNavigation()?.extras.state){
-        //capturamos la informacion
-        this.userLg = this.router.getCurrentNavigation()?.extras?.state?.['userconect'];
-      }
-    });
+  ngOnInit() {
+    // Obtiene la navegación actual y accede al estado pasado
+    this.userF = this.router.getCurrentNavigation()?.extras.state?.['userconect'] || '';
   }
 
-  ngOnInit(){
-    this.userF = this.userLg;
+  // Método para cerrar sesión y redirigir al login
+  cerrarSesion() {
+    // Redirige a la página de inicio de sesión sin pasar ningún estado adicional
+    this.router.navigate(['/login']);
   }
-
- 
-
-  cerrarSesion(){
-    let navigationextras: NavigationExtras = {
-      state:{
-        userconect: " "
-      }
-    };
-    
-    this.userF = " ";
-    this.router.navigate(['/login'], navigationextras);
-  }
-
-
-
-  
-
-  
-
 }
