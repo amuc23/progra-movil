@@ -18,15 +18,15 @@
     <ion-list>
       <ion-item>
         <ion-label>Usuario</ion-label>
-        <ion-input type="email" id="email" name="email" required [(ngModel)]="usernameunlogged"></ion-input>
+        <ion-input id="username" name="email" required [(ngModel)]="usernameunlogged"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label>Contraseña</ion-label>
-        <ion-input type="password" label="" value="" required [(ngModel)]="usernameunlogged">
+        <ion-input type="password" label="" value="" required [(ngModel)]="password">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
       </ion-item>
-      <ion-button expand="block" [routerLink]="['/home']">Ingresar</ion-button>
+      <ion-button expand="block" (click)="loggin()">Ingresar</ion-button>
     </ion-list>
     <p>No tienes cuenta? <a routerLink="/registro">Regístrate aquí!</a></p>
     <p>No recuerdas tu clave? <a routerLink="/recuperar">Recuperala aqui</a></p>

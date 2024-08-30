@@ -25,7 +25,7 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let colec_juegos of colec_juegos">
           <ion-card>
-            <img [src]="colec_juegos.imgJ" alt="img juegos" />
+            <img  class="Jcard" [src]="colec_juegos.imgJ" alt="img juegos" />
             <ion-card-header>
               <ion-card-title>{{ colec_juegos.precioJ }}</ion-card-title>
               <ion-card-subtitle>{{ colec_juegos.nomJ}}</ion-card-subtitle>
@@ -50,7 +50,7 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let colec_consolas of colec_consolas">
-          <ion-card>
+          <ion-card class="Ccard">
             <img [src]="colec_consolas.imgC" alt="img juegos" />
             <ion-card-header>
               <ion-card-title>{{ colec_consolas.precioC }}</ion-card-title>
@@ -76,7 +76,7 @@
     <div class="swiper-container">
       <div class="swiper-wrapper">
         <div class="swiper-slide" *ngFor="let colec_juguetes of colec_juguetes">
-          <ion-card>
+          <ion-card class="JTcard">
             <img class="imgcardJT" [src]="colec_juguetes.imgJT" alt="img juguetes" />
             <ion-card-header>
               <ion-card-title>{{ colec_juguetes.precioJT }}</ion-card-title>
