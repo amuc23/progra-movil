@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/home']"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/paneladmin']"></ion-back-button>
     </ion-buttons>
     <ion-title>CRUD Consolas</ion-title>
   </ion-toolbar>
@@ -23,9 +23,9 @@
         <img [src]="consola.imagenUrl" alt="{{ consola.nombre }}">
       </ion-thumbnail>
       <ion-label>
-        <h2>{{ consola.nombre }}</h2>
+        <h3>{{ consola.nombre }}</h3>
         <p>{{ consola.descripcion }}</p>
-        <p><strong>Precio:</strong> {{ consola.precio }}</p>
+        <p><strong>Precio:</strong> {{ consola.precio| currency:'CLP':'symbol':'1.0-0' }}</p>
         <p><strong>Stock:</strong> {{ consola.stock }}</p>
       </ion-label>
       <!-- Botones de acción para editar y eliminar -->

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/home']"></ion-back-button>
+      <ion-back-button defaultHref="/" text="Atras" icon="arrow-back-outline" [routerLink]="['/paneladmin']"></ion-back-button>
     </ion-buttons>
     <ion-title>CRUD Juguetes</ion-title>
   </ion-toolbar>
@@ -23,9 +23,9 @@
         <img [src]="juguete.imagenUrl" alt="{{ juguete.nombre }}">
       </ion-thumbnail>
       <ion-label>
-        <h2>{{ juguete.nombre }}</h2>
+        <h3>{{ juguete.nombre }}</h3>
         <p>{{ juguete.descripcion }}</p>
-        <p><strong>Precio:</strong> {{ juguete.precio }}</p>
+        <p><strong>Precio:</strong> {{ juguete.precio| currency:'CLP':'symbol':'1.0-0' }}</p>
         <p><strong>Stock:</strong> {{ juguete.stock }}</p>
       </ion-label>
       <!-- Botones de acción para editar y eliminar -->

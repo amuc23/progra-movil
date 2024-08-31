@@ -10,7 +10,7 @@ export class CrudjuegosPage implements OnInit {
   videojuegos = [
     {
       nombre: 'Juego A',
-      precio: 29.99,
+      precio: 29990,
       descripcion: 'Descripción del Juego A',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',
@@ -18,7 +18,7 @@ export class CrudjuegosPage implements OnInit {
     },
     {
       nombre: 'Juego B',
-      precio: 49.99,
+      precio: 4999,
       descripcion: 'Descripción del Juego B',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PC, Nintendo Switch',
@@ -26,7 +26,7 @@ export class CrudjuegosPage implements OnInit {
     },
     {
       nombre: 'Juego C',
-      precio: 19.99,
+      precio: 19990,
       descripcion: 'Descripción del Juego C',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox, PC',
@@ -34,7 +34,7 @@ export class CrudjuegosPage implements OnInit {
     },
     {
       nombre: 'Juego D',
-      precio: 39.99,
+      precio: 39990,
       descripcion: 'Descripción del Juego D',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'Nintendo Switch, PC',
@@ -42,7 +42,7 @@ export class CrudjuegosPage implements OnInit {
     },
     {
       nombre: 'Juego E',
-      precio: 59.99,
+      precio: 59990,
       descripcion: 'Descripción del Juego E',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',

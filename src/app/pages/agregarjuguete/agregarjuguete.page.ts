@@ -28,8 +28,22 @@ export class AgregarjuguetePage implements OnInit {
         buttons: ['OK']
       });
       await alert.present();
+    } else if (this.precio < 0) {
+      const alert = await this.alertController.create({
+        header: 'Error',
+        message: 'El precio no puede ser menor a 0.',
+        buttons: ['OK']
+      });
+      await alert.present();
+    } else if (this.stock < 0) {
+      const alert = await this.alertController.create({
+        header: 'Error',
+        message: 'El stock no puede ser menor a 0.',
+        buttons: ['OK']
+      });
+      await alert.present();
     } else {
-      // Redireccionar solo si todos los campos están completos
+      // Redireccionar solo si todos los campos están completos y son válidos
       this.router.navigate(['/crudjuguetes']);
     }
   }
