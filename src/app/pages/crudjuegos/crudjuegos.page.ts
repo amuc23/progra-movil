@@ -36,7 +36,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Dbz Kakaroto',
       precio: 39990,
       descripcion: 'Juego de pelea ',
-      imagenUrl: 'assets/img/juegos/dbz-kakaroto-portada.jpg',
+      imagenUrl: 'assets/img/juegos/dbz-kakaroto-portada.jpeg',
       consolas: 'Nintendo Switch, PC',
       stock: 25
     },
@@ -44,7 +44,7 @@ export class CrudjuegosPage implements OnInit {
       nombre: 'Skyrim',
       precio: 59990,
       descripcion: 'Juego de aventura',
-      imagenUrl: 'assets/img/juegos/Skyrim_Cover.jpg',
+      imagenUrl: 'assets/img/juegos/Skyrim_Cover.jpeg',
       consolas: 'PlayStation, Xbox',
       stock: 15
     }

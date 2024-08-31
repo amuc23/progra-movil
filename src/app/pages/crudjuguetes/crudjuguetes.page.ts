@@ -19,7 +19,7 @@ export class CrudjuguetesPage implements OnInit {
       nombre: 'Amibo Kirby',
       precio: 14990,
       descripcion: 'Figura coleccionable de kirby.',
-      imagenUrl: 'assets/img/juguetes/akirby-juguete.jpg',
+      imagenUrl: 'assets/img/juguetes/akirby-juguete.jpeg',
       stock: 40
     },
     {

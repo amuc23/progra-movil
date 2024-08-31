@@ -12,7 +12,7 @@ export class CrudconsolasPage implements OnInit {
       nombre: 'PlayStation 2',
       precio: 459990,
       descripcion: 'Aguante la play 2.',
-      imagenUrl: 'assets/img/consolas/ps2-consola.jpg',
+      imagenUrl: 'assets/img/consolas/ps2-consola.jpeg',
       stock: 20
     },
     {
@@ -40,7 +40,7 @@ export class CrudconsolasPage implements OnInit {
       nombre: 'Sega Genesis',
       precio: 299990, 
       descripcion: 'Una reliquia de los 80.',
-      imagenUrl: 'assets/img/consolas/sega-genesis-consola.jpg',
+      imagenUrl: 'assets/img/consolas/sega-genesis-consola.jpeg',
       stock: 18
     }
   ];
