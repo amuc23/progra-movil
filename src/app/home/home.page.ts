@@ -65,7 +65,7 @@ export class HomePage implements AfterViewInit {
     {
       nomC: '2dsXL',
       precioC: '$210.000',
-      imgC: 'assets/img/consolas/2dsXL-consola.jpg'
+      imgC: 'assets/img/consolas/2dsXL-consola.jpeg'
     },
     {
       nomC: 'Nintendo Switch',
