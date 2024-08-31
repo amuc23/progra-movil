@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
@@ -118,7 +118,8 @@ const routes: Routes = [
   {
     path: 'juegounico',
     loadChildren: () => import('./pages/juegounico/juegounico.module').then( m => m.JuegounicoPageModule)
-  },  {
+  },
+  {
     path: 'jugueteunico',
     loadChildren: () => import('./pages/jugueteunico/jugueteunico.module').then( m => m.JugueteunicoPageModule)
   },
@@ -129,6 +130,10 @@ const routes: Routes = [
   {
     path: 'ayudacliente',
     loadChildren: () => import('./pages/ayudacliente/ayudacliente.module').then( m => m.AyudaclientePageModule)
+  },
+  {
+    path: 'acercadenosotros',
+    loadChildren: () => import('./pages/acercadenosotros/acercadenosotros.module').then( m => m.AcercadenosotrosPageModule)
   },
 
 

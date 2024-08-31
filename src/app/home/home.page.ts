@@ -1,5 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import Swiper from 'swiper'; // Muestra más de una tarjeta parcialmente visible esto se instala con un npm install swiper
 
 @Component({
@@ -127,10 +128,24 @@ export class HomePage implements AfterViewInit {
 
   usernamelogged!:string;
 
-  constructor(private router: Router, private activedroute: ActivatedRoute) {}
+  constructor(private router: Router, private activedroute: ActivatedRoute, private alertController: AlertController) {}
   
 
   ngAfterViewInit() {
     new Swiper('.swiper-container', this.slideOpts);
+  }
+
+  compra(){
+    this.presentAlert('Añadido al carro','¡Gracias!');
+  }
+
+  async presentAlert(titulo:string,msj:string) {
+    const alert = await this.alertController.create({
+      header: titulo,
+      message: msj,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
   }
 }

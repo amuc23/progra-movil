@@ -6,8 +6,7 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-    </ion-title>
+    <ion-title>home</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -31,7 +30,7 @@
               <ion-card-subtitle>{{ colec_juegos.nomJ}}</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
-              <ion-button>
+              <ion-button (click)="compra()">
                 <ion-icon name="cart-outline"></ion-icon>
                 Añadir
               </ion-button>
@@ -41,7 +40,7 @@
       </div>
     </div>
 
-    <div style="height: 80px;"></div> 
+    <div style="height: 3pc;"></div> 
     <!------------------------------------------------------------->
 
     <!-- Swiper Slider (titulo)-->
@@ -57,7 +56,7 @@
               <ion-card-subtitle>{{ colec_consolas.nomC}}</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
-              <ion-button>
+              <ion-button (click)="compra()">
                 <ion-icon name="cart-outline"></ion-icon>
                 Añadir
               </ion-button>
@@ -67,7 +66,7 @@
       </div>
     </div>
 
-    <div style="height: 80px;"></div> 
+    <div style="height: 3pc;"></div> 
     <!------------------------------------------------------------->
 
     <!-- Swiper Slider (titulo)-->
@@ -83,7 +82,7 @@
               <ion-card-subtitle>{{ colec_juguetes.nomJT}}</ion-card-subtitle>
             </ion-card-header>
             <ion-card-content>
-              <ion-button>
+              <ion-button (click)="compra()">
                 <ion-icon name="cart-outline"></ion-icon>
                 Añadir
               </ion-button>
@@ -93,14 +92,17 @@
       </div>
     </div>
 
-    <div style="height: 80px;"></div> 
+    <div style="height: 5pc;"></div> 
     <!------------------------------------------------------------->
 
-    <img src="assets/img/swiper1.jpeg" alt="NEWS" class="imgNEWS" />
-
-    
     <!--Slider de noticias-->
+    <img src="assets/img/swiper1.jpeg" alt="NEWS" class="imgNEWS" />
 
     <!-- fin home container-->
   </div>
 </ion-content>
+
+
+
+
+

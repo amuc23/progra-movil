@@ -1,13 +1,17 @@
 .juguete-card {
-  background: #87a6e9d8; /* Fondo transparente de la tarjeta */
-  border: 6px solid #175aa79c; /* Borde del cuadro */
+  background: #2c3e50; /* Fondo oscuro para mayor contraste */
+  border: 6px solid #3498db; /* Borde azul vibrante */
   border-radius: 8px; /* Esquinas redondeadas */
   padding: 10px; /* Espaciado interno */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.815); /* Sombra del cuadro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Sombra del cuadro */
   margin: 15px; /* Espaciado externo */
 }
 
-.thumbnail-grande{
+h2 {
+  color: #ecf0f1; /* Color blanco suculento */
+}
+
+.thumbnail-grande {
   width: 40%; /* Tamaño más grande de la imagen */
   height: 40%; 
   object-fit: cover; /* Asegura que la imagen cubra completamente el espacio */
@@ -26,12 +30,12 @@
 
 .juguete-card p {
   font-size: 1rem; /* Tamaño del texto del precio y consolas */
-  color: #ffffff; /* Color del texto */
+  color: #bdc3c7; /* Color gris claro para el texto */
 }
 
 .add-cart-item ion-button {
   font-size: 1rem; /* Tamaño del texto del botón */
-  --background: #000000; /* Color de fondo del botón */
+  --background: #3498db; /* Color de fondo del botón azul vibrante */
   --color: white; /* Color del texto del botón */
 }
 
@@ -39,16 +43,15 @@
   font-size: 1.2rem; /* Tamaño del icono del carrito */
 }
 
-/* Agregar transparencia al ion-item */
 ion-item {
-  --background: #ebebeb00; /* Fondo transparente */
+  --background: #34495e; /* Fondo gris oscuro */
+  --color: #ecf0f1; /* Color del texto blanco */
 }
 
 ion-content {
   --background: none;
   background: linear-gradient(to bottom right, #121212, #007bff); /* Gris oscuro a azul brillante */
 }
-
 
 .custom-searchbar input {
   --padding-start: 10px; /* Espaciado al inicio del input */
@@ -58,10 +61,6 @@ ion-content {
 
 ion-searchbar {
   --color: white;
-  --placeholder-color: rgba(255, 255, 255, 0.5); /* Cambiar el color del placeholder */
-  --cancel-button-color: white; /* Color del botón de cancelar */
-}
-
-h2 {
-  color: white;
+  --placeholder-color: rgba(255, 255, 255, 0.8); /* Color del placeholder más visible */
+  --cancel-button-color: #3498db; /* Color del botón de cancelar azul vibrante */
 }
