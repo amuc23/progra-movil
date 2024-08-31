@@ -16,31 +16,31 @@ export class CrudjuguetesPage implements OnInit {
       stock: 50
     },
     {
-      nombre: 'Funko Pop de Darth Vader',
+      nombre: 'Amibo Kirby',
       precio: 14990,
-      descripcion: 'Figura coleccionable Funko Pop de Darth Vader, ideal para fans de Star Wars.',
-      imagenUrl: 'assets/img/juguetes/spiderman-juguete.jpg',
+      descripcion: 'Figura coleccionable de kirby.',
+      imagenUrl: 'assets/img/juguetes/akirby-juguete.jpg',
       stock: 40
     },
     {
-      nombre: 'Set de LEGO Harry Potter',
+      nombre: 'Funko Pop Coronel',
       precio: 49990,
-      descripcion: 'Set de LEGO de la serie Harry Potter que incluye minifiguras y escenarios icónicos.',
-      imagenUrl: 'assets/img/juguetes/spiderman-juguete.jpg',
+      descripcion: 'Figura del coronel .',
+      imagenUrl: 'assets/img/juguetes/coronel-juguete.jpg',
       stock: 30
     },
     {
-      nombre: 'Réplica del Escudo del Capitán América',
+      nombre: 'Funko Pop Kratos',
       precio: 69990,
-      descripcion: 'Réplica a escala del escudo del Capitán América, hecha de materiales de alta calidad.',
-      imagenUrl: 'assets/img/juguetes/spiderman-juguete.jpg',
+      descripcion: 'Figura de kratos.',
+      imagenUrl: 'assets/img/juguetes/Kratos2.jpg',
       stock: 20
     },
     {
-      nombre: 'Pelota de Dragon Ball Z',
+      nombre: 'Zelda amibo',
       precio: 9990,
-      descripcion: 'Pelota coleccionable de Dragon Ball Z con el diseño de las esferas del dragón.',
-      imagenUrl: 'assets/img/juguetes/spiderman-juguete.jpg',
+      descripcion: 'Amibo de zelda.',
+      imagenUrl: 'assets/img/juguetes/Zelda-juguete.png',
       stock: 100
     }
   ];

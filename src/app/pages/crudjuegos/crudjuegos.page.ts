@@ -9,42 +9,42 @@ export class CrudjuegosPage implements OnInit {
   
   videojuegos = [
     {
-      nombre: 'Juego A',
+      nombre: ' Hollow knight',
       precio: 29990,
-      descripcion: 'Descripción del Juego A',
+      descripcion: 'Juego de paciencia',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',
       stock: 35
     },
     {
-      nombre: 'Juego B',
+      nombre: 'Lies of pi',
       precio: 4999,
-      descripcion: 'Descripción del Juego B',
-      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
+      descripcion: 'Juego de estrategia',
+      imagenUrl: 'assets/img/juegos/caratula-liesofp.jpeg',
       consolas: 'PC, Nintendo Switch',
       stock: 20
     },
     {
-      nombre: 'Juego C',
+      nombre: 'Megaman 11',
       precio: 19990,
-      descripcion: 'Descripción del Juego C',
-      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
+      descripcion: 'Juego de megaman nuevo',
+      imagenUrl: 'assets/img/juegos/caratula-megaman11.jpeg',
       consolas: 'PlayStation, Xbox, PC',
       stock: 50
     },
     {
-      nombre: 'Juego D',
+      nombre: 'Dbz Kakaroto',
       precio: 39990,
-      descripcion: 'Descripción del Juego D',
-      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
+      descripcion: 'Juego de pelea ',
+      imagenUrl: 'assets/img/juegos/dbz-kakaroto-portada.jpg',
       consolas: 'Nintendo Switch, PC',
       stock: 25
     },
     {
-      nombre: 'Juego E',
+      nombre: 'Skyrim',
       precio: 59990,
-      descripcion: 'Descripción del Juego E',
-      imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
+      descripcion: 'Juego de aventura',
+      imagenUrl: 'assets/img/juegos/Skyrim_Cover.jpg',
       consolas: 'PlayStation, Xbox',
       stock: 15
     }
