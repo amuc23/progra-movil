@@ -16,7 +16,7 @@ ion-content {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
   border-radius: 8px;
-  background: linear-gradient(to bottom right, #3498db, #2ecc71);
+  background: linear-gradient(to bottom right, #58d5ff, #244dd6);
 }
 
 /* Encabezado dentro del contenedor de login */
@@ -66,7 +66,7 @@ p {
 
 /* Enlace dentro del párrafo */
 p a {
-  color: #007bff; /* Color azul para el enlace */
+  color: #00d5ff; /* Color azul para el enlace */
   text-decoration: none;
 }
 
@@ -82,4 +82,8 @@ ion-list {
 .spacer {
   margin: 20px 0; /* Espacio vacío vertical */
   padding: 20px; /* Espacio dentro del elemento */
+}
+
+.opsAD{
+  color: white;
 }
