@@ -20,6 +20,7 @@ h4{
     font-size: 3pc;
     color: white;
     text-align: center;
+    justify-items: center;
 }
 
 
@@ -78,12 +79,12 @@ h4{
         h5 {
           margin: 0;
           font-size: 1rem;
-          color: #000; /* Color del nombre del usuario */
+          color: white; /* Color del nombre del usuario */
         }
         
         p {
           margin: 0;
-          color: #333; /* Color del texto de la reseña */
+          color: white; /* Color del texto de la reseña */
         }
       }
     }
@@ -94,12 +95,15 @@ h4{
 .descripJuego {
     width: 100%;
     height: 150px;
-    padding: 10px;
     border: 1px solid #00bfff; /* Bordes celestes */
     border-radius: 4px;
-    resize: vertical; /* Permite el redimensionamiento vertical */
     box-sizing: border-box;
     color: white;
     font-size: 2pc;
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+    padding: 10px; /* Agrega padding interno para separar del borde */
+    line-height: 1.5; /* Ajusta la altura de la línea para mejorar la legibilidad */
+    text-align: center;
+    justify-items: center;
 }
 
