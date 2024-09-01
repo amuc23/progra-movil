@@ -34,9 +34,69 @@
     </ion-row>
   </div>
 
-  <div style="margin: 20px 0;"></div> 
+  <!------------------------------------->
+  <div style="margin: 1pc 0;"></div> 
+  <!------------------------------------->
 
-  <div class="resecnas-container">
-
+  <h4>Resumen del juego</h4>
+  <div class="descripcion-container">
+    <p class="descripJuego">Consta de un juego
+      sencillo por plataformas y de mundo abierto</p>
   </div>
+  
+
+  <!------------------------------------->
+  <div style="margin: 10pc 0;"></div> 
+  <!------------------------------------->
+
+
+  <h4 style="justify-items: center;">Reseñas de los Usuarios</h4>
+  
+  <ion-card class="resecnas-container">
+      <!-- Apartado con fondo azul y texto blanco -->
+      <div class="cajaresecnas">
+        <div class="textoresecnas">
+          <p>Escribe tu texto aquí</p>
+        </div>
+        <div class="btn-container">
+          <ion-button class="btns" fill="solid">
+            <ion-icon slot="start" name="camera"></ion-icon>
+          </ion-button>
+          <ion-button class="btns" fill="solid">
+            Subir
+          </ion-button>
+        </div>
+      </div>
+
+      <!-- Sección de reseñas -->
+      <div class="reseñas">
+        <div class="reseña">
+          <ion-avatar>
+            <img src="assets/img/Zero.png" alt="Usuario 1">
+          </ion-avatar>
+          <div class="reseña-texto">
+            <h5>Braze007</h5>
+            <p>Esta es una reseña de ejemplo. ¡Me encanta este producto!</p>
+          </div>
+        </div>
+        <div class="reseña">
+          <ion-avatar>
+            <img src="assets/img/Zero.png" alt="Usuario 2">
+          </ion-avatar>
+          <div class="reseña-texto">
+            <h5>ElmaMado46</h5>
+            <p>Otro comentario. Muy útil y de buena calidad.</p>
+          </div>
+        </div>
+        <div class="reseña">
+          <ion-avatar>
+            <img src="assets/img/Zero.png" alt="Usuario 3">
+          </ion-avatar>
+          <div class="reseña-texto">
+            <h5>Yugi</h5>
+            <p>Excelente. Recomiendo a todos.</p>
+          </div>
+        </div>
+      </div>
+  </ion-card>
 </ion-content>

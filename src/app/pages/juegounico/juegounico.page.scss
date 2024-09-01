@@ -18,6 +18,88 @@ ion-content {
 
 h4{
     font-size: 3pc;
+    color: white;
+    text-align: center;
 }
 
+
+
+.cajaresecnas {
+    color: white;  
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+    
+    .textoresecnas {
+      flex: 1; /* Ocupa el espacio restante */
+      padding: 10px;
+      border: 2px solid #ffffff; /* Bordes blancos */
+      border-radius: 4px;
+      margin-right: 20px; /* Espacio entre el área de texto y los botones */
+      box-sizing: border-box;
+    }
+  
+    .btn-container {
+      display: flex;
+      align-items: flex-end; /* Alinea los botones a la derecha */
+  
+      .btns {
+        margin-bottom: 10px; /* Espacio entre los botones */
+        --background: #0004ff;
+        --color: #ffffff;  
+      }
+    }
+}
+
+.reseñas {
+    margin-top: 20px; /* Espacio entre la caja de texto y las reseñas */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+    
+    .reseña {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.9); /* Fondo semi-transparente */
+      border-radius: 8px;
+      background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+  
+      ion-avatar {
+        margin-right: 10px; /* Espacio entre el avatar y el texto */
+      }
+  
+      .reseña-texto {
+        h5 {
+          margin: 0;
+          font-size: 1rem;
+          color: #000; /* Color del nombre del usuario */
+        }
+        
+        p {
+          margin: 0;
+          color: #333; /* Color del texto de la reseña */
+        }
+      }
+    }
+  }
+
+
+  
+.descripJuego {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #00bfff; /* Bordes celestes */
+    border-radius: 4px;
+    resize: vertical; /* Permite el redimensionamiento vertical */
+    box-sizing: border-box;
+    color: white;
+    font-size: 2pc;
+}
 
