@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarjuguetePage implements OnInit {
 
-  juguete = {
+  juguete : any = {
       nombre: 'Funko Pop  de Spider-Man',
       precio: 19990,
       descripcion: 'Figura de Spider-Man .',

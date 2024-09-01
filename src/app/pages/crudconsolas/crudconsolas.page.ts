@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudconsolasPage implements OnInit {
 
-  consolas = [
+  consolas: any = [
     {
       nombre: 'PlayStation 2',
       precio: 459990,

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudjuguetesPage implements OnInit {
 
-  juguetes = [
+  juguetes: any = [
     {
       nombre: 'Funko Pop  de Spider-Man',
       precio: 19990,

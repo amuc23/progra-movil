@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarjuegoPage implements OnInit {
 
-  videojuego = {
-    nombre: 'Juego A',
-    precio: 29.99,
-    descripcion: 'Descripción del Juego A',
+  videojuego : any = {
+    nombre: 'Hollow Kningt',
+    precio: 15000,
+    descripcion: 'Juego de plataformas',
     imagenUrl: 'assets/img/caratula-hollow.jpeg',
     consolas: 'PlayStation, Xbox',
     stock: 20

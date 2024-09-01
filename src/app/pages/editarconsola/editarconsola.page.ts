@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarconsolaPage implements OnInit {
 
-  consola = {
+  consola : any = {
       nombre: 'PlayStation 2',
       precio: 459990,
       descripcion: 'La última consola de Sony con gráficos avanzados y soporte para juegos de nueva generación.',

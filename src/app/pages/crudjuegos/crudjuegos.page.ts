@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudjuegosPage implements OnInit {
   
-  videojuegos = [
+  videojuegos: any= [
     {
       nombre: ' Hollow knight',
-      precio: 29990,
+      precio: 15000,
       descripcion: 'Juego de paciencia',
       imagenUrl: 'assets/img/juegos/caratula-hollow.jpeg',
       consolas: 'PlayStation, Xbox',
