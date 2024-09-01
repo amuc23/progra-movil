@@ -17,6 +17,10 @@ export class JuegounicoPage implements OnInit {
     this.presentAlert('Añadido al carro','¡Gracias!');
   }
 
+  listadeseos(){
+    this.presentAlert('Añadido a Lista de Deseos','¡Gracias!');
+  }
+
   async presentAlert(titulo:string,msj:string) {
     const alert = await this.alertController.create({
       header: titulo,

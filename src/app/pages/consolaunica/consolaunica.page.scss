@@ -1,0 +1,108 @@
+ion-content {
+    --background: none;
+    background: linear-gradient(to bottom right, #121212, #007bff); 
+}
+
+.consola-image {
+    width: 50%;
+    margin: 0 auto 20px;
+    border-radius: 20px;
+}
+
+.consolaU-container {
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-size: 2pc;
+}
+
+h4{
+    font-size: 3pc;
+    color: white;
+    text-align: center;
+    justify-items: center;
+}
+
+
+
+.cajaresecnas {
+    color: white;  
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+    
+    .textoresecnas {
+      flex: 1; 
+      padding: 10px;
+      border: 2px solid #ffffff; 
+      border-radius: 4px;
+      margin-right: 20px; 
+      box-sizing: border-box;
+    }
+  
+    .btn-container {
+      display: flex;
+      align-items: flex-end; 
+  
+      .btns {
+        margin-bottom: 10px; 
+        --background: #0004ff;
+        --color: #ffffff;  
+      }
+    }
+}
+
+.reseñas {
+    margin-top: 20px; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    border-radius: 8px;
+    background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+    
+    .reseña {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0.9); 
+      border-radius: 8px;
+      background: linear-gradient(to bottom right, #58d5ff, #244dd6);
+  
+      ion-avatar {
+        margin-right: 10px; 
+      }
+  
+      .reseña-texto {
+        h5 {
+          margin: 0;
+          font-size: 1rem;
+          color: white; 
+        }
+        
+        p {
+          margin: 0;
+          color: white; 
+        }
+      }
+    }
+  }
+
+
+  
+.descripConsola {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #00bfff; /* Bordes celestes */
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: white;
+    font-size: 2pc;
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+    padding: 10px; 
+    line-height: 1.5; 
+    text-align: center;
+    justify-items: center;
+}
