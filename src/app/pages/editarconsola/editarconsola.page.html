@@ -7,7 +7,7 @@
 <ion-content [fullscreen]="true">
   <div class="editarconsola-container">
     <ion-list>
-      <h1>Editar Juego</h1>
+      <h1>Editar Consola</h1>
       
       <ion-item>
         <ion-label>Nombre de la consola</ion-label>
@@ -21,7 +21,7 @@
 
       <ion-item>
         <ion-label>Descripción</ion-label>
-        <ion-textarea [(ngModel)]="consola.descripcion"></ion-textarea>
+        <ion-textarea class="custom-input"  [(ngModel)]="consola.descripcion"></ion-textarea>
       </ion-item>
 
       <ion-item>
@@ -34,6 +34,8 @@
         <ion-input class="custom-input" type="url" [(ngModel)]="consola.imagenUrl"></ion-input>
         <ion-icon name="camera" slot="end" class="camera-icon"></ion-icon>
       </ion-item>
+
+      <div style="height: 3pc;"></div> 
       
     </ion-list>
     <ion-button class="boton" expand="full" [routerLink]="['/crudconsolas']">Guardar Cambios</ion-button>

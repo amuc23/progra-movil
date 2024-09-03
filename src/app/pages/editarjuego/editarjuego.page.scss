@@ -42,9 +42,8 @@ ion-list {
 
 /* Estilo para los campos de entrada personalizados */
 .custom-input {
-    --background: rgba(221, 7, 7, 0.1); /* Fondo ligeramente transparente */
     --color: #ffffff; /* Texto blanco */
-    border: 2px solid #000000; /* Borde negro */
+    border: 2px solid #ffffff; /* Borde negro */
     padding: 8px; /* Añade un poco de padding dentro del input */
     border-radius: 10px; /* Bordes redondeados */
 }
@@ -55,10 +54,17 @@ ion-list {
     --padding-end: 16px;
     --border-radius: 8px;
     font-size: 1.2em; /* Tamaño más grande para el texto de los botones */
-    color: #000000; /* Texto negro en los botones */
+    color: #ffffff; /* Texto negro en los botones */
     --background: #007bff; /* Fondo azul brillante para los botones */
 }
-.camera-icon {
-    font-size: 24px; /* Ajusta el tamaño del ícono según lo necesites */
-    color: #000; /* Ajusta el color del ícono si es necesario */
-  }
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 3pc;
+}
+
+.camera-icon{
+    color: white;
+    size: 1pc;
+    padding-left: 1pc;
+}
