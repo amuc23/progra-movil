@@ -9,11 +9,11 @@
     <h2>Recuperar Contraseña</h2>
     <ion-list>
       <ion-item>
-        <ion-label>Correo Electronico</ion-label>
-        <ion-input type="email" id="email" name="email" required></ion-input>
+        <ion-label>Correo Electrónico</ion-label>
+        <ion-input type="email" [(ngModel)]="email" required></ion-input>
       </ion-item>
-      <ion-button expand="block" [routerLink]="['/cambioclave']">Enviar Correo Para Cambiar Contraseña De Ingreso</ion-button>
+      <p *ngIf="errorMessage" style="color: red;" class="error-message">{{ errorMessage }}</p>
+      <ion-button expand="block" (click)="validarCorreo()">Enviar Correo Para Cambiar Contraseña De Ingreso</ion-button>
     </ion-list>
   </div>
 </ion-content>
-

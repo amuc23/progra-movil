@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cambioclave',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cambioclave.page.scss'],
 })
 export class CambioclavePage implements OnInit {
+  password: string = '';
+  confirmPassword: string = '';
+  errorMessage: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  validarContrasenas() {
+    if (!this.password || !this.confirmPassword) {
+      this.errorMessage = 'Los campos no pueden estar vacíos.';
+    } else if (this.password !== this.confirmPassword || this.password.length < 6) {
+      this.errorMessage = 'Las contraseñas no coinciden o no cumplen con los requisitos.';
+    } else {
+      this.errorMessage = '';
+      this.router.navigate(['/login']);
+    }
   }
-
 }

@@ -5,29 +5,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!--espacio-->
   <div class="spacer"></div>
 
-  <!--contenido-->
   <div class="cambio-container">
     <h2>Cambio De Contraseña</h2>
     <ion-list> 
 
       <ion-item>
-        <ion-label >Contraseña</ion-label>
-        <ion-input type="password" label="" value="">
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="password">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label >Confirmar Contraseña</ion-label>
-        <ion-input type="password" label="" value="">
+        <ion-label>Confirmar Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword">
           <ion-input-password-toggle slot="end"></ion-input-password-toggle>
         </ion-input>
       </ion-item>
 
-      <ion-button expand="block" [routerLink]="['/login']">Realizar Cambio De Contraseña</ion-button>
+      <p *ngIf="errorMessage" style="color: red;" class="error-message">{{ errorMessage }}</p>
+
+      <ion-button expand="block" (click)="validarContrasenas()">
+        Realizar Cambio De Contraseña
+      </ion-button>
     </ion-list>
   </div>
 </ion-content>
