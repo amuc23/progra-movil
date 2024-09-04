@@ -40,10 +40,10 @@
         <ion-icon name="camera" slot="end" class="camera-icon"></ion-icon>
       </ion-item>
     
-    <div style="height: 3pc;"></div> 
+      <div style="height: 3pc;"></div> 
       
     </ion-list>
-    <ion-button class="boton" expand="full" [routerLink]="['/crudjuegos']">Guardar Cambios</ion-button>
+    <ion-button class="boton" expand="full" (click)="guardarCambios()">Guardar Cambios</ion-button>
     <ion-button class="boton" expand="full" [routerLink]="['/crudjuegos']">Volver</ion-button>
   </div>
 </ion-content>
