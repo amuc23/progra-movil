@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-carrito',
@@ -8,22 +8,12 @@ import { AlertController } from '@ionic/angular';
 })
 export class CarritoPage implements OnInit {
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertasService: AlertasService) { } // Inyección del servicio de alertas
 
   ngOnInit() {
   }
 
-  alertascarro(){
-    this.presentAlert1('Gracias Por Su Compra','');  }
-
-  async presentAlert1(titulo:string,msj:string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: msj,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
+  alertascarro() {
+    this.alertasService.presentAlert('Gracias Por Su Compra', ''); // Uso del servicio para mostrar la alerta
   }
-
 }

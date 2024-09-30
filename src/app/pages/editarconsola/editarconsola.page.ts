@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta del servicio sea correcta
 
 @Component({
   selector: 'app-editarconsola',
@@ -21,38 +22,36 @@ export class EditarconsolaPage implements OnInit {
   errorPrecio: boolean = false;
   errorStock: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private alertasService: AlertasService) {}
 
   ngOnInit() {}
 
-  guardarCambios() {
+  async guardarCambios() {
     // Reiniciar errores antes de la validación
     this.errorCampos = false;
     this.errorPrecio = false;
     this.errorStock = false;
 
     // Verificar si algún campo está vacío
-    if (!this.consola.nombre || !this.consola.precio || !this.consola.descripcion || !this.consola.stock || !this.consola.imagenUrl) {
+    if (!this.consola.nombre || this.consola.precio === null || !this.consola.descripcion || this.consola.stock === null || !this.consola.imagenUrl) {
       this.errorCampos = true;
-      return;
+      return; // Salir si hay errores
     }
 
     // Verificar si el precio es menor a 0
     if (this.consola.precio < 0) {
       this.errorPrecio = true;
-      return;
+      return; // Salir si hay errores
     }
 
     // Verificar si el stock es menor a 0
     if (this.consola.stock < 0) {
       this.errorStock = true;
-      return;
+      return; // Salir si hay errores
     }
 
-    // Si todos los campos son válidos, limpiar los errores
-    this.errorCampos = false;
-    this.errorPrecio = false;
-    this.errorStock = false;
+    // Si todos los campos son válidos, mostrar alerta de éxito
+    await this.alertasService.presentAlert('Éxito', 'Producto editado correctamente');
 
     // Navegar a la página deseada
     this.router.navigate(['/crudconsolas']);

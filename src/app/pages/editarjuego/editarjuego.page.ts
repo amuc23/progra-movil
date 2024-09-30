@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta del servicio sea correcta
 
 @Component({
   selector: 'app-editarjuego',
@@ -22,35 +23,38 @@ export class EditarjuegoPage implements OnInit {
   errorPrecio: boolean = false;
   errorStock: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private alertasService: AlertasService) { }
 
   ngOnInit() { }
 
-  guardarCambios() {
+  async guardarCambios() {
     // Reiniciar errores antes de la validación
     this.errorCampos = false;
     this.errorPrecio = false;
     this.errorStock = false;
 
     // Verifica si algún campo está vacío
-    if (!this.videojuego.nombre || !this.videojuego.precio || !this.videojuego.descripcion || !this.videojuego.stock || !this.videojuego.consolas || !this.videojuego.imagenUrl) {
+    if (!this.videojuego.nombre || this.videojuego.precio === null || !this.videojuego.descripcion || this.videojuego.stock === null || !this.videojuego.consolas || !this.videojuego.imagenUrl) {
       this.errorCampos = true;
-      return;
+      return; // Salir si hay errores
     }
 
     // Verifica si el precio es menor a 0
     if (this.videojuego.precio < 0) {
       this.errorPrecio = true;
-      return;
+      return; // Salir si hay errores
     }
 
     // Verifica si el stock es menor a 0
     if (this.videojuego.stock < 0) {
       this.errorStock = true;
-      return;
+      return; // Salir si hay errores
     }
 
-    // Si todos los campos están completos y los valores son válidos, redirige
+    // Si todos los campos son válidos, mostrar alerta de éxito
+    await this.alertasService.presentAlert('Éxito', 'Producto editado correctamente');
+
+    // Navegar a la página deseada
     this.router.navigate(['/crudjuegos']);
   }
 }

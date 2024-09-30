@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import { AlertasSilenciosasService } from 'src/app/services/alertasilenciosa.service'; // Asegúrate de que la ruta sea correcta
 
 interface Categoria {
   value: string;
@@ -13,7 +13,6 @@ interface Categoria {
   styleUrls: ['./ayudacliente.page.scss'],
 })
 export class AyudaclientePage implements OnInit {
-
   categorias: Categoria[] = [
     { value: 'consolas', viewValue: 'Consolas' },
     { value: 'juegos', viewValue: 'Juegos' },
@@ -27,32 +26,20 @@ export class AyudaclientePage implements OnInit {
 
   constructor(
     private router: Router,
-    private toastController: ToastController
-  ) { }
+    private alertasSilenciosasService: AlertasSilenciosasService // Inyecta el servicio
+  ) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   async onSubmit() {
     // Validación de campos
     if (!this.categoria || !this.email.includes('@') || !this.descripcion) {
-      const toast = await this.toastController.create({
-        message: 'Por favor completa todos los campos correctamente.',
-        duration: 2000,
-        position: 'bottom',
-        color: 'danger',
-      });
-      await toast.present();
+      await this.alertasSilenciosasService.presentSilentToast('Por favor completa todos los campos correctamente.', 2000);
       return;
     }
 
     // Mostrar el toast de éxito
-    const toast = await this.toastController.create({
-      message: 'Petición enviada',
-      duration: 2000,
-      position: 'bottom',
-      color: 'success',
-    });
-    await toast.present();
+    await this.alertasSilenciosasService.presentSilentToast('Petición enviada', 2000);
 
     // Redirigir a la página de perfil después del toast
     setTimeout(() => {

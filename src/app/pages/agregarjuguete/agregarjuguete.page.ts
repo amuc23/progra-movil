@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta del servicio sea correcta
 
 @Component({
   selector: 'app-agregarjuguete',
@@ -20,11 +21,11 @@ export class AgregarjuguetePage implements OnInit {
   errorPrecio: boolean = false;
   errorStock: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private alertasService: AlertasService) {}
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  validarCampos() {
+  async validarCampos() {
     // Reiniciar errores
     this.errorCampos = false;
     this.errorPrecio = false;
@@ -35,19 +36,36 @@ export class AgregarjuguetePage implements OnInit {
       this.errorCampos = true;
     }
 
-    // Verificar si el precio o el stock son menores a 0
+    // Verificar si el precio es menor a 0
     if (this.precio !== null && this.precio < 0) {
       this.errorPrecio = true;
     }
 
+    // Verificar si el stock es menor a 0
     if (this.stock !== null && this.stock < 0) {
       this.errorStock = true;
     }
 
-    // Si no hay errores, redirigir
-    if (!this.errorCampos && !this.errorPrecio && !this.errorStock) {
-      this.router.navigate(['/crudjuguetes']);
+    // Si hay errores, mostrar alertas correspondientes
+    if (this.errorCampos) {
+      await this.alertasService.presentAlert('Error', 'Todos los campos son obligatorios.');
+      return;
     }
+
+    if (this.errorPrecio) {
+      await this.alertasService.presentAlert('Error', 'El precio no puede ser menor a 0.');
+      return;
+    }
+
+    if (this.errorStock) {
+      await this.alertasService.presentAlert('Error', 'El stock no puede ser menor a 0.');
+      return;
+    }
+
+    // Si todos los campos son válidos, mostrar alerta de éxito
+    await this.alertasService.presentAlert('Éxito', 'Juguete agregado correctamente');
+
+    // Navegar a la página deseada
+    this.router.navigate(['/crudjuguetes']);
   }
 }
-

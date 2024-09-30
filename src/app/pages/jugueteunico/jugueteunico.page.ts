@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-jugueteunico',
@@ -8,28 +8,16 @@ import { AlertController } from '@ionic/angular';
 })
 export class JugueteunicoPage implements OnInit {
 
-  constructor(private alertController: AlertController) { }
+  constructor(private alertasService: AlertasService) { } // Inyección del servicio de alertas
 
   ngOnInit() {
   }
 
-  compra(){
-    this.presentAlert('Añadido al carro','¡Gracias!');
+  compra() {
+    this.alertasService.presentAlert('Añadido al carro', '¡Gracias!'); // Uso del servicio para mostrar la alerta
   }
 
-  listadeseos(){
-    this.presentAlert('Añadido a Lista de Deseos','¡Gracias!');
+  listadeseos() {
+    this.alertasService.presentAlert('Añadido a Lista de Deseos', '¡Gracias!'); // Uso del servicio para mostrar la alerta
   }
-
-  async presentAlert(titulo:string,msj:string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: msj,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
-  }
-
-
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-eliminarjuguete',
@@ -10,25 +10,19 @@ import { Router } from '@angular/router';
 export class EliminarjuguetePage implements OnInit {
 
   constructor(
-    private alertController: AlertController,
+    private alertasService: AlertasService, // Inyección del servicio de alertas
     private router: Router
   ) { }
 
   ngOnInit() { }
 
   async eliminarJuguete() {
-    const alert = await this.alertController.create({
-      header: 'Producto Eliminado',
-      message: 'El juguete ha sido eliminado exitosamente.',
-      buttons: ['OK']
-    });
+    // Aquí puedes realizar la lógica para eliminar el juguete
 
-    await alert.present();
+    // Muestra la alerta utilizando el servicio
+    await this.alertasService.presentAlert('Producto Eliminado', 'El juguete ha sido eliminado exitosamente.');
 
     // Redirige después de que el usuario haya cerrado la alerta
-    alert.onDidDismiss().then(() => {
-      this.router.navigate(['/crudjuguetes']);
-    });
+    this.router.navigate(['/crudjuguetes']);
   }
-
 }

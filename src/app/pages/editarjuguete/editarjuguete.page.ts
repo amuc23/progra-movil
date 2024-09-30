@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta del servicio sea correcta
 
 @Component({
   selector: 'app-editarjuguete',
@@ -21,33 +22,38 @@ export class EditarjuguetePage implements OnInit {
   errorPrecio: boolean = false;
   errorStock: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private alertasService: AlertasService) { }
 
   ngOnInit() { }
 
-  guardarCambios() {
+  async guardarCambios() {
     // Reiniciar errores
     this.errorCampos = false;
     this.errorPrecio = false;
     this.errorStock = false;
 
     // Verificar si algún campo está vacío
-    if (!this.juguete.nombre || !this.juguete.precio || !this.juguete.descripcion || !this.juguete.stock || !this.juguete.imagenUrl) {
+    if (!this.juguete.nombre || this.juguete.precio === null || !this.juguete.descripcion || this.juguete.stock === null || !this.juguete.imagenUrl) {
       this.errorCampos = true;
+      return; // Salir si hay errores
     }
 
-    // Verificar si el precio o el stock son menores a 0
+    // Verificar si el precio es menor a 0
     if (this.juguete.precio < 0) {
       this.errorPrecio = true;
+      return; // Salir si hay errores
     }
 
+    // Verificar si el stock es menor a 0
     if (this.juguete.stock < 0) {
       this.errorStock = true;
+      return; // Salir si hay errores
     }
 
-    // Si no hay errores, redirigir
-    if (!this.errorCampos && !this.errorPrecio && !this.errorStock) {
-      this.router.navigate(['/crudjuguetes']);
-    }
+    // Si todos los campos son válidos, mostrar alerta de éxito
+    await this.alertasService.presentAlert('Éxito', 'Producto editado correctamente');
+
+    // Navegar a la página deseada
+    this.router.navigate(['/crudjuguetes']);
   }
 }

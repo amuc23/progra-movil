@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AlertController } from '@ionic/angular';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 import Swiper from 'swiper'; // Muestra más de una tarjeta parcialmente visible esto se instala con un npm install swiper
 
 @Component({
@@ -16,11 +16,8 @@ export class HomePage implements AfterViewInit {
     loop: true,         // Hace que las tarjetas no se repitan en un bucle
   };
   
-  
-
-  //COLECCIONES DE PRODUCTOS
-
-/////////////COLECCION DE JUEGOS//////////////////////////////////
+  // COLECCIONES DE PRODUCTOS
+  // COLECCIÓN DE JUEGOS
   colec_juegos = [
     {
       nomJ: 'Hollow Knight',
@@ -53,10 +50,8 @@ export class HomePage implements AfterViewInit {
       imgJ: 'assets/img/juegos/gears of wars.jpeg'
     }
   ];
-  ///////////////////////////////////////////////////////////
 
-
-  ////////////COLECCION DE CONSOLAS//////////////////////
+  // COLECCIÓN DE CONSOLAS
   colec_consolas = [
     {
       nomC: 'Ps2',
@@ -89,10 +84,8 @@ export class HomePage implements AfterViewInit {
       imgC: 'assets/img/consolas/wii-1.jpeg'
     }
   ];
-  ///////////////////////////////////////////////////////////
 
-
-  ///////////////////////////////////////////////////////////
+  // COLECCIÓN DE JUGUETES
   colec_juguetes = [
     {
       nomJT: 'Batman ',
@@ -126,26 +119,19 @@ export class HomePage implements AfterViewInit {
     }
   ];
 
-  usernamelogged!:string;
+  usernamelogged!: string;
 
-  constructor(private router: Router, private activedroute: ActivatedRoute, private alertController: AlertController) {}
+  constructor(
+    private router: Router, 
+    private activedroute: ActivatedRoute, 
+    private alertasService: AlertasService // Inyección del servicio de alertas
+  ) {}
   
-
   ngAfterViewInit() {
     new Swiper('.swiper-container', this.slideOpts);
   }
 
-  compra(){
-    this.presentAlert('Añadido al carro','¡Gracias!');
-  }
-
-  async presentAlert(titulo:string,msj:string) {
-    const alert = await this.alertController.create({
-      header: titulo,
-      message: msj,
-      buttons: ['OK'],
-    });
-
-    await alert.present();
+  compra() {
+    this.alertasService.presentAlert('Añadido al carro', '¡Gracias!');
   }
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-eliminarjuego',
@@ -9,28 +9,20 @@ import { Router } from '@angular/router';
 })
 export class EliminarjuegoPage implements OnInit {
 
-
-
   constructor(
-    private alertController: AlertController,
+    private alertasService: AlertasService, // Inyección del servicio de alertas
     private router: Router
   ) { }
 
   ngOnInit() { }
 
   async eliminarJuego() {
-    const alert = await this.alertController.create({
-      header: 'Producto Eliminado',
-      message: 'El videojuego ha sido eliminado exitosamente.',
-      buttons: ['OK']
-    });
+    // Aquí puedes realizar la lógica para eliminar el videojuego
 
-    await alert.present();
+    // Muestra la alerta utilizando el servicio
+    await this.alertasService.presentAlert('Producto Eliminado', 'El videojuego ha sido eliminado exitosamente.');
 
     // Redirige después de que el usuario haya cerrado la alerta
-    alert.onDidDismiss().then(() => {
-      this.router.navigate(['/crudjuegos']);
-    });
+    this.router.navigate(['/crudjuegos']);
   }
-
 }

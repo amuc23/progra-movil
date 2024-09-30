@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Asegúrate de que la ruta sea correcta
 
 @Component({
   selector: 'app-eliminarconsola',
@@ -10,25 +10,19 @@ import { Router } from '@angular/router';
 export class EliminarconsolaPage implements OnInit {
 
   constructor(
-    private alertController: AlertController,
+    private alertasService: AlertasService, // Inyección del servicio
     private router: Router
   ) { }
 
   ngOnInit() { }
 
   async eliminarConsola() {
-    const alert = await this.alertController.create({
-      header: 'Producto Eliminado',
-      message: 'La consola ha sido eliminada exitosamente.',
-      buttons: ['OK']
-    });
+    // Aquí puedes realizar la lógica para eliminar la consola
 
-    await alert.present();
+    // Luego, muestra la alerta
+    await this.alertasService.presentAlert('Producto Eliminado', 'La consola ha sido eliminada exitosamente.');
 
     // Redirige después de que el usuario haya cerrado la alerta
-    alert.onDidDismiss().then(() => {
-      this.router.navigate(['/crudconsolas']);
-    });
+    this.router.navigate(['/crudconsolas']);
   }
-
 }

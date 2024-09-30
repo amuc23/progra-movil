@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertasService } from 'src/app/services/alertas.service'; // Ruta del servicio
 
 @Component({
   selector: 'app-agregarconsola',
@@ -20,11 +21,11 @@ export class AgregarconsolaPage implements OnInit {
   errorPrecio: boolean = false;
   errorStock: boolean = false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private alertasService: AlertasService) {}
 
   ngOnInit() {}
 
-  validarCampos() {
+  async validarCampos() {
     // Reiniciar errores antes de la validación
     this.errorCampos = false;
     this.errorPrecio = false;
@@ -33,27 +34,27 @@ export class AgregarconsolaPage implements OnInit {
     // Verificar si algún campo está vacío
     if (!this.nombre || !this.descripcion || this.precio === null || this.stock === null || !this.urlImagen) {
       this.errorCampos = true;
-      return;
     }
 
     // Verificar si el precio es menor a 0
-    if (this.precio < 0) {
+    if (this.precio !== null && this.precio < 0) {
       this.errorPrecio = true;
-      return;
     }
 
     // Verificar si el stock es menor a 0
-    if (this.stock < 0) {
+    if (this.stock !== null && this.stock < 0) {
       this.errorStock = true;
-      return;
     }
 
-    // Si todos los campos son válidos, limpiar los errores
-    this.errorCampos = false;
-    this.errorPrecio = false;
-    this.errorStock = false;
+    // Si hay errores, solo regresar sin mostrar alertas
+    if (this.errorCampos || this.errorPrecio || this.errorStock) {
+      return; // Salir de la función si hay errores
+    }
 
-    // Navegar a la página deseada
+    // Si todos los campos son válidos, mostrar alerta de éxito
+    await this.alertasService.presentAlert('Éxito', 'Consola agregada correctamente');
+
+    // Navegar a la página deseada después de cerrar la alerta
     this.router.navigate(['/crudconsolas']);
   }
 }
