@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -18,42 +17,40 @@ export class EditarjuegoPage implements OnInit {
     stock: 20
   };
 
-  constructor(
-    private alertController: AlertController,
-    private router: Router
-  ) { }
+  // Variables de control para los mensajes de error
+  errorCampos: boolean = false;
+  errorPrecio: boolean = false;
+  errorStock: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
-  async guardarCambios() {
+  guardarCambios() {
+    // Reiniciar errores antes de la validación
+    this.errorCampos = false;
+    this.errorPrecio = false;
+    this.errorStock = false;
+
     // Verifica si algún campo está vacío
     if (!this.videojuego.nombre || !this.videojuego.precio || !this.videojuego.descripcion || !this.videojuego.stock || !this.videojuego.consolas || !this.videojuego.imagenUrl) {
-      await this.mostrarAlerta('Todos los campos son obligatorios. Por favor, completa todos los campos.');
+      this.errorCampos = true;
       return;
     }
 
-    // Verifica si el precio o el stock son menores a 0
+    // Verifica si el precio es menor a 0
     if (this.videojuego.precio < 0) {
-      await this.mostrarAlerta('El precio no puede ser menor a 0.');
+      this.errorPrecio = true;
       return;
     }
 
+    // Verifica si el stock es menor a 0
     if (this.videojuego.stock < 0) {
-      await this.mostrarAlerta('El stock no puede ser menor a 0.');
+      this.errorStock = true;
       return;
     }
 
-    // Si todos los campos están completos y los valores son válidos, navega a la página deseada
+    // Si todos los campos están completos y los valores son válidos, redirige
     this.router.navigate(['/crudjuegos']);
-  }
-
-  async mostrarAlerta(mensaje: string) {
-    const alert = await this.alertController.create({
-      header: 'Error',
-      message: mensaje,
-      buttons: ['OK']
-    });
-
-    await alert.present();
   }
 }

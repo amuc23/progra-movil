@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -17,42 +16,38 @@ export class EditarjuguetePage implements OnInit {
     stock: 50
   };
 
-  constructor(
-    private alertController: AlertController,
-    private router: Router
-  ) { }
+  // Variables para los mensajes de error
+  errorCampos: boolean = false;
+  errorPrecio: boolean = false;
+  errorStock: boolean = false;
+
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
-  async guardarCambios() {
-    // Verifica si algún campo está vacío
+  guardarCambios() {
+    // Reiniciar errores
+    this.errorCampos = false;
+    this.errorPrecio = false;
+    this.errorStock = false;
+
+    // Verificar si algún campo está vacío
     if (!this.juguete.nombre || !this.juguete.precio || !this.juguete.descripcion || !this.juguete.stock || !this.juguete.imagenUrl) {
-      await this.mostrarAlerta('Todos los campos son obligatorios. Por favor, completa todos los campos.');
-      return;
+      this.errorCampos = true;
     }
 
-    // Verifica si el precio o el stock son menores a 0
+    // Verificar si el precio o el stock son menores a 0
     if (this.juguete.precio < 0) {
-      await this.mostrarAlerta('El precio no puede ser menor a 0.');
-      return;
+      this.errorPrecio = true;
     }
 
     if (this.juguete.stock < 0) {
-      await this.mostrarAlerta('El stock no puede ser menor a 0.');
-      return;
+      this.errorStock = true;
     }
 
-    // Si todos los campos están completos y los valores son válidos, navega a la página deseada
-    this.router.navigate(['/crudjuguetes']);
-  }
-
-  async mostrarAlerta(mensaje: string) {
-    const alert = await this.alertController.create({
-      header: 'Error',
-      message: mensaje,
-      buttons: ['OK']
-    });
-
-    await alert.present();
+    // Si no hay errores, redirigir
+    if (!this.errorCampos && !this.errorPrecio && !this.errorStock) {
+      this.router.navigate(['/crudjuguetes']);
+    }
   }
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,36 +14,40 @@ export class AgregarjuguetePage implements OnInit {
   precio: number | null = null;
   stock: number | null = null;
   urlImagen: string = '';
+  
+  // Variables para los mensajes de error
+  errorCampos: boolean = false;
+  errorPrecio: boolean = false;
+  errorStock: boolean = false;
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
-  async validarCampos() {
+  validarCampos() {
+    // Reiniciar errores
+    this.errorCampos = false;
+    this.errorPrecio = false;
+    this.errorStock = false;
+
+    // Verificar si algún campo está vacío
     if (!this.nombre || !this.descripcion || this.precio === null || this.stock === null || !this.urlImagen) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'Debe rellenar todos los campos.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else if (this.precio < 0) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'El precio no puede ser menor a 0.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else if (this.stock < 0) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'El stock no puede ser menor a 0.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else {
-      // Redireccionar solo si todos los campos están completos y son válidos
+      this.errorCampos = true;
+    }
+
+    // Verificar si el precio o el stock son menores a 0
+    if (this.precio !== null && this.precio < 0) {
+      this.errorPrecio = true;
+    }
+
+    if (this.stock !== null && this.stock < 0) {
+      this.errorStock = true;
+    }
+
+    // Si no hay errores, redirigir
+    if (!this.errorCampos && !this.errorPrecio && !this.errorStock) {
       this.router.navigate(['/crudjuguetes']);
     }
   }
 }
+

@@ -40,5 +40,10 @@
 
     <ion-button class="boton" expand="full" (click)="guardarCambios()">Guardar Cambios</ion-button>
     <ion-button class="boton" expand="full" [routerLink]="['/crudjuguetes']">Volver</ion-button>
+
+    <!-- Mensajes de error -->
+    <div *ngIf="errorCampos" class="error-message">Todos los campos son obligatorios. Por favor, completa todos los campos.</div>
+    <div *ngIf="errorPrecio" class="error-message">El precio no puede ser menor a 0.</div>
+    <div *ngIf="errorStock" class="error-message">El stock no puede ser menor a 0.</div>
   </div>
 </ion-content>

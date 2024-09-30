@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController } from '@ionic/angular';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,35 +15,45 @@ export class AgregarconsolaPage implements OnInit {
   stock: number | null = null;
   urlImagen: string = '';
 
-  constructor(private alertController: AlertController, private router: Router) { }
+  // Variables de control para mostrar mensajes de error
+  errorCampos: boolean = false;
+  errorPrecio: boolean = false;
+  errorStock: boolean = false;
 
-  ngOnInit() { }
+  constructor(private router: Router) {}
 
-  async validarCampos() {
+  ngOnInit() {}
+
+  validarCampos() {
+    // Reiniciar errores antes de la validación
+    this.errorCampos = false;
+    this.errorPrecio = false;
+    this.errorStock = false;
+
+    // Verificar si algún campo está vacío
     if (!this.nombre || !this.descripcion || this.precio === null || this.stock === null || !this.urlImagen) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'Debe rellenar todos los campos.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else if (this.precio < 0) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'El precio no puede ser menor a 0.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else if (this.stock < 0) {
-      const alert = await this.alertController.create({
-        header: 'Error',
-        message: 'El stock no puede ser menor a 0.',
-        buttons: ['OK']
-      });
-      await alert.present();
-    } else {
-      // Redireccionar solo si todos los campos están completos y son válidos
-      this.router.navigate(['/crudconsolas']);
+      this.errorCampos = true;
+      return;
     }
+
+    // Verificar si el precio es menor a 0
+    if (this.precio < 0) {
+      this.errorPrecio = true;
+      return;
+    }
+
+    // Verificar si el stock es menor a 0
+    if (this.stock < 0) {
+      this.errorStock = true;
+      return;
+    }
+
+    // Si todos los campos son válidos, limpiar los errores
+    this.errorCampos = false;
+    this.errorPrecio = false;
+    this.errorStock = false;
+
+    // Navegar a la página deseada
+    this.router.navigate(['/crudconsolas']);
   }
 }

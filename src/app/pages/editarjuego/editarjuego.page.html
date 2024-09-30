@@ -39,6 +39,11 @@
         <ion-input class="custom-input" type="url" [(ngModel)]="videojuego.imagenUrl"></ion-input>
         <ion-icon name="camera" slot="end" class="camera-icon"></ion-icon>
       </ion-item>
+
+      <!-- Mensajes de error -->
+      <p *ngIf="errorCampos" class="error-message">Todos los campos son obligatorios. Por favor, completa todos los campos.</p>
+      <p *ngIf="errorPrecio" class="error-message">El precio no puede ser menor a 0.</p>
+      <p *ngIf="errorStock" class="error-message">El stock no puede ser menor a 0.</p>
     
       <div style="height: 3pc;"></div> 
       
