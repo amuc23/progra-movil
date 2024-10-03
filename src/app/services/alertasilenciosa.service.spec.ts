@@ -1,13 +1,12 @@
 import { TestBed } from '@angular/core/testing';
+import { AlertasSilenciosasService } from './alertasilenciosa.service'; // Asegúrate de usar el nombre correcto
 
-import { AlertasilenciosaService } from './alertasilenciosa.service';
-
-describe('AlertasilenciosaService', () => {
-  let service: AlertasilenciosaService;
+describe('AlertasSilenciosasService', () => {
+  let service: AlertasSilenciosasService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AlertasilenciosaService);
+    service = TestBed.inject(AlertasSilenciosasService); // Usa el nombre correcto aquí también
   });
 
   it('should be created', () => {
