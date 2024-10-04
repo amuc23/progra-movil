@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Platform } from '@ionic/angular';
+import { ManejodbService } from './services/manejodb.service';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +8,21 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  //username: string = 'JOJO';
+  constructor(
+    private platform: Platform,
+    private manejodbService: ManejodbService
+  ) {
+    this.initializeApp();
+  }
 
-  //var inicializada pero vacía
-  //usernameMENU!:string;
-  constructor() {}
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // Aquí puedes añadir lógica de inicialización
+      this.manejodbService.dbState().subscribe((ready) => {
+        if (ready) {
+          // La alerta ha sido removida
+        }
+      });
+    });
+  }
 }

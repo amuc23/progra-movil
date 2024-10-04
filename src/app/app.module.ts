@@ -14,6 +14,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 
+// Importaciones necesarias para SQLite y servicios
+import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
+import { AlertasService } from './services/alertas.service';
+import { ManejodbService } from './services/manejodb.service';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -26,7 +31,12 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,       // Módulo para usar <mat-form-field>
     FormsModule               // Requerido para trabajar con formularios
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    SQLite,                   // Asegúrate de incluir SQLite
+    AlertasService,           // Servicio de alertas
+    ManejodbService           // Servicio de manejo de base de datos
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
