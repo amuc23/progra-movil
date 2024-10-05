@@ -135,6 +135,11 @@ const routes: Routes = [
     path: 'acercadenosotros',
     loadChildren: () => import('./pages/acercadenosotros/acercadenosotros.module').then( m => m.AcercadenosotrosPageModule)
   },
+  
+  {
+    path: 'adminresecnas',
+    loadChildren: () => import('./pages/adminresecnas/adminresecnas.module').then( m => m.AdminresecnasPageModule)
+  },
   {
     path: '**',
     loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
