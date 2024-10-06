@@ -49,7 +49,9 @@ export class ManejodbService {
   //////////////////////////////////////INSERTS//////////////////////////////////////////////////
 
   //insert de los roles de usuario
-  rolesusuario: string= "INSERT OR IGNORE INTO rol_usuario (nombre_rol) VALUES ('administrador'), ('cliente');";
+  rolesusuario1: string= "INSERT OR IGNORE INTO rol_usuario (nombre_rol) VALUES ('administrador');";
+
+  rolesusuario2: string= "INSERT OR IGNORE INTO rol_usuario (nombre_rol) VALUES ('cliente');";
   
   //insert de 1 usuario 
   registrousuario: string= "INSERT OR IGNORE INTO usuario (rut_usuario, nombres_usuario, apellidos_usuario, username, clave, correo, token_recup_clave, estado_user, id_rol) VALUES ('12345678-9', 'Juan Ignacio', 'Perez Lopez', 'admin', 'Admin123.', 'juan.perez@example.com', FALSE, TRUE, 1);";
@@ -87,12 +89,14 @@ export class ManejodbService {
 
     this.platform.ready().then(() => {
       this.sqlite.create({
-        name: 'megagames2.db',
+        name: 'megagames5.db',
         location: 'default'
       }).then((db: SQLiteObject) => {
         this.database = db;
         this.creartablas();
+        this.consultarUsuarios();
         this.alertasService.presentAlert("Creación de BD", "Base de datos creada con éxito."); // Alerta de éxito
+        this.isDBReady.next(true);
         this.dbCreated = true; // Marca que la base de datos fue creada
       }).catch(e => {
         this.alertasService.presentAlert("Creación de BD", "Error creando la BD: " + JSON.stringify(e)); // Alerta de error
@@ -114,10 +118,10 @@ export class ManejodbService {
       await this.database.executeSql(this.favoritos, []);
 
       //se espera (await) a que terminen los insert si es que hay
-      await this.database.executeSql(this.rolesusuario, []);
+      await this.database.executeSql(this.rolesusuario1, []);
+      await this.database.executeSql(this.rolesusuario2, []);
       await this.database.executeSql(this.registrousuario, []);
       await this.database.executeSql(this.categoriasproductos, []);
-      console.log("EXITO");
     } catch (e) {
       this.alertasService.presentAlert("Creación de tabla", "Error creando las tablas: " + JSON.stringify(e));
     }
