@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { SQLite, SQLiteObject } from '@awesome-cordova-plugins/sqlite/ngx';
 import { Platform } from '@ionic/angular';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { AlertasService } from 'src/app/services/alertas.service'; 
-import { Usuarios } from './usuarios';
+import { AlertasService } from 'src/app/services/alertas.service';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +10,7 @@ import { Usuarios } from './usuarios';
 export class ManejodbService {
 
   public database!: SQLiteObject;
+  private dbCreated: boolean = false; // Propiedad para rastrear si la BD ya fue creada
 
   // Creación de las tablas
   rol_usuario: string = "CREATE TABLE IF NOT EXISTS rol_usuario (id_rol INTEGER PRIMARY KEY autoincrement, nombre_rol VARCHAR(50) NOT NULL);";
@@ -20,22 +20,13 @@ export class ManejodbService {
 
   registrousuario: string= "INSERT OR IGNORE INTO usuario (id_usuario, rut_usuario, nombres_usuario, apellidos_usuario, username, clave, correo, token_recup_clave, estado_user, id_rol) VALUES (1, '12345678-9', 'Juan', 'Perez', 'juanperez', 'password123', 'juan.perez@example.com', FALSE, TRUE, 1);";
 
-  listadoUsuarios = new BehaviorSubject([]);
-  private idDBReady: BehaviorSubject<boolean> = new BehaviorSubject(false);
-
   constructor(private sqlite: SQLite, private platform: Platform, private alertasService: AlertasService) { 
-    this.crearBD();
-  }
-
-  fetchUsuarios(): Observable<Usuarios[]> {
-    return this.listadoUsuarios.asObservable();
-  } 
-
-  dbState() {
-    return this.idDBReady.asObservable();
+    // No llamamos a crearBD aquí
   }
 
   crearBD() {
+    if (this.dbCreated) return; // Verifica si la base de datos ya fue creada
+
     this.platform.ready().then(() => {
       this.sqlite.create({
         name: 'megagames1.db',
@@ -43,11 +34,10 @@ export class ManejodbService {
       }).then((db: SQLiteObject) => {
         this.database = db;
         this.creartablas();
-        this.idDBReady.next(true);
         this.alertasService.presentAlert("Creación de BD", "Base de datos creada con éxito."); // Alerta de éxito
+        this.dbCreated = true; // Marca que la base de datos fue creada
       }).catch(e => {
         this.alertasService.presentAlert("Creación de BD", "Error creando la BD: " + JSON.stringify(e)); // Alerta de error
-        console.log("ERROR CREACIÓN BD");
       });
     });
   }
@@ -61,7 +51,6 @@ export class ManejodbService {
       await this.database.executeSql(this.registrousuario, []);
       console.log("EXITO");
     } catch (e) {
-      console.log("Error conectando las tablas");
       this.alertasService.presentAlert("Creación de tabla", "Error creando las tablas: " + JSON.stringify(e));
     }
   }

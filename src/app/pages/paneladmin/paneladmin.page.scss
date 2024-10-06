@@ -9,23 +9,23 @@ ion-content {
 }
 
 .home-image {
-  width: 50%;
+  width: 60%; /* Ajuste del tamaño de la imagen */
   margin: 0 auto 20px;
   border-radius: 20px;
 }
 
 .button-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Botones ajustables */
   gap: 15px;
 }
 
 .grid-button {
-  height: 80px;
+  height: 60px; /* Ajuste de la altura de los botones */
   --background: #007bff; /* Azul brillante */
   --color: #e0e0e0; /* Texto gris claro */
   --border-radius: 15px;
-  font-size: 18px;
+  font-size: 16px; /* Ajuste del tamaño de la fuente */
 }
 
 .centered-button {

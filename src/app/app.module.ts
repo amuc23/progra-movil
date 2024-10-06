@@ -14,10 +14,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 
-// Importaciones necesarias para SQLite y servicios
+// Importaciones necesarias para SQLite
 import { SQLite } from '@awesome-cordova-plugins/sqlite/ngx';
-import { AlertasService } from './services/alertas.service';
-import { ManejodbService } from './services/manejodb.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,9 +31,7 @@ import { ManejodbService } from './services/manejodb.service';
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    SQLite,                   // Asegúrate de incluir SQLite
-    AlertasService,           // Servicio de alertas
-    ManejodbService           // Servicio de manejo de base de datos
+    SQLite                    // Asegúrate de incluir SQLite
   ],
   bootstrap: [AppComponent],
 })
